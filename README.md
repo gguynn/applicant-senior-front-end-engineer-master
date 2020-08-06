@@ -11,12 +11,12 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 
 `cd dist/public && valet link eats && cd ../../`
 
-### 3. Configure your database
+### 3. Configure your database and copy theme foloder
 
 Note: I will forgo using environment variables for this exercise.
 
 1. Create a SQL database.  Mine is called: `eats`
-1. Run: `cp src/wp-config.php dist/public/wp-config.php`
+1. Run: `cp src/wp-config.php dist/public/wp-config.php && cp -rf src/theme/sfee/ dist/public/wp-content/themes/sfee/`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
 1. Import this SQL file into your database: `src/eats_2020-08-06.sql`
 
