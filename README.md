@@ -5,7 +5,7 @@ Install WordPress via Composer.
 composer install
 ```
 
-Note: I will be using [https://laravel.com/docs/7.x/valet](Laravel Valet) to map the domain (eats.text).
+Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map the domain: http://eats.test
 ```bash
 cd dist/public
 valet link eats
