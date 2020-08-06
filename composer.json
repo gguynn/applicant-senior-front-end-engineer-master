@@ -15,7 +15,7 @@
         "johnpbloch/wordpress": "^5.4.2"
     },
     "extra": {
-        "wordpress-install-dir": "./dist/wordpress",
+        "wordpress-install-dir": "./dist/public",
         "installer-paths": {
             "./public/wp-content/mu-plugins/{$name}/": [
                 "type:wordpress-muplugin"
