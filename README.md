@@ -11,15 +11,16 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 ```bash
 cd dist/public
 valet link eats
+cd ../../
 ```
 ### 3. Configure your database
 
 Note: I will forgo using environment variables for this exercise.
 
 1. Create a SQL database.  Mine is called: `eats`
-1. Import the SQL file into your database: `eats_2020-08-06.sql`
-1. Run: `cp dist/wp-config.php dist/public/wp-config.php`
+1. Run: `cp src/wp-config.php dist/public/wp-config.php`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
+1. Import the SQL file into your database: `src/eats_2020-08-06.sql`
 
 # 10up Senior Front End Engineering Technical Challenge
 Your task is to create the attached design within a WordPress theme environment. The theme should use a WordPress menu for the main navigation, a standard loop output for displaying the article under the navigation, and the WP search. All the necessary design files are inside this directory as well as any information you need to complete the exercise.
