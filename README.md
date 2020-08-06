@@ -1,6 +1,6 @@
 # Installation
 
-### 1. Install WordPress via Composer.
+### 1. Install WordPress via Composer
 ```bash
 composer install
 ```
@@ -16,8 +16,8 @@ valet link eats
 
 Note: I will forgo using environment variables for this exercise.
 
-* Create a SQL database.  Mine is called: `eats`
-* Update the database name and credentials in: `dist/public/wp-config.php`
+1. Create a SQL database.  Mine is called: `eats`
+1. Update the database name and credentials in: `dist/public/wp-config.php`
 
 # 10up Senior Front End Engineering Technical Challenge
 Your task is to create the attached design within a WordPress theme environment. The theme should use a WordPress menu for the main navigation, a standard loop output for displaying the article under the navigation, and the WP search. All the necessary design files are inside this directory as well as any information you need to complete the exercise.
