@@ -17,6 +17,7 @@ valet link eats
 Note: I will forgo using environment variables for this exercise.
 
 1. Create a SQL database.  Mine is called: `eats`
+1. Import the SQL file into your database: `eats_2020-08-06.sql`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
 
 # 10up Senior Front End Engineering Technical Challenge
