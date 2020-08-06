@@ -22,6 +22,12 @@ Note: I will forgo using environment variables for this exercise.
 1. Update the database name and credentials in: `dist/public/wp-config.php`
 1. Import the SQL file into your database: `src/eats_2020-08-06.sql`
 
+### 4. Login to WordPress
+
+[http://eats.test/wp-login.php](http://eats.test/wp-login.php)
+* user: demo
+* pass: Nn3hbaS7Qi1nXRv)KWJXaX*D
+
 # 10up Senior Front End Engineering Technical Challenge
 Your task is to create the attached design within a WordPress theme environment. The theme should use a WordPress menu for the main navigation, a standard loop output for displaying the article under the navigation, and the WP search. All the necessary design files are inside this directory as well as any information you need to complete the exercise.
 
