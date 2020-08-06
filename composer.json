@@ -1,0 +1,31 @@
+{
+    "name": "gguynn/applicant-senior-front-end-engineer-master",
+    "description": "10up Senior Front End Engineering Technical Challenge",
+    "type": "project",
+    "homepage": "https://github.com/gguynn/applicant-senior-front-end-engineer-master",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Garrett Guynn",
+          "homepage": "https://github.com/gguynn"
+        }
+      ],
+    "require": {
+        "php": "^7.4",
+        "johnpbloch/wordpress": "^5.4.2"
+    },
+    "extra": {
+        "wordpress-install-dir": "./dist/wordpress",
+        "installer-paths": {
+            "./public/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "./public/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "./public/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}
