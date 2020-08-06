@@ -8,11 +8,9 @@ composer install
 ### 2. Map DNS to the public directory
 
 Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map the domain: http://eats.test
-```bash
-cd dist/public
-valet link eats
-cd ../../
-```
+
+`cd dist/public && valet link eats && cd ../../`
+
 ### 3. Configure your database
 
 Note: I will forgo using environment variables for this exercise.
