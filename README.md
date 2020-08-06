@@ -20,7 +20,7 @@ Note: I will forgo using environment variables for this exercise.
 1. Create a SQL database.  Mine is called: `eats`
 1. Run: `cp src/wp-config.php dist/public/wp-config.php`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
-1. Import the SQL file into your database: `src/eats_2020-08-06.sql`
+1. Import this SQL file into your database: `src/eats_2020-08-06.sql`
 
 ### 4. Login to WordPress
 
