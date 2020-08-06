@@ -1,3 +1,16 @@
+# Installation
+
+Install WordPress via Composer.
+```bash
+composer install
+```
+
+Note: I will be using [https://laravel.com/docs/7.x/valet](Laravel Valet) to map the domain (eats.text).
+```bash
+cd dist/public
+valet link eats
+```
+
 # 10up Senior Front End Engineering Technical Challenge
 Your task is to create the attached design within a WordPress theme environment. The theme should use a WordPress menu for the main navigation, a standard loop output for displaying the article under the navigation, and the WP search. All the necessary design files are inside this directory as well as any information you need to complete the exercise.
 
