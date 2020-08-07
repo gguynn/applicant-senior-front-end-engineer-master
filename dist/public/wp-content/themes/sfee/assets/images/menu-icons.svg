@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="icon-menu" viewBox="0 0 20 14">
+            <path d="M0,3H20V5H0ZM0,9H20v2H0Zm0,6H20v2H0Z" transform="translate(0 -3)" style="fill:#fff"/>
+        </symbol>
+
+        <symbol id="icon-close" viewBox="0 0 16.97 16.97">
+            <path d="M10,8.59,2.93,1.51,1.51,2.93,8.59,10,1.52,17.07l1.41,1.41L10,11.41l7.07,7.08,1.41-1.42L11.41,10l7.08-7.07L17.07,1.51Z" transform="translate(-1.51 -1.51)" style="fill:#fff"/>
+        </symbol>
+
+        <symbol id="icon-search" viewBox="0 0 19.67 19.66">
+            <path d="M12.9,14.32a7.94,7.94,0,1,1,1.4-1.39v0l5.35,5.33-1.42,1.42-5.33-5.34ZM8,14A6,6,0,1,0,2,8,6,6,0,0,0,8,14Z" transform="translate(0.01 0)" style="fill:#fff"/>
+        </symbol>
+
+        <symbol id="icon-search-submit" viewBox="0 0 19.67 19.66">
+            <path d="M12.9,14.32a7.94,7.94,0,1,1,1.4-1.39v0l5.35,5.33-1.42,1.42-5.33-5.34ZM8,14A6,6,0,1,0,2,8,6,6,0,0,0,8,14Z" transform="translate(0.01 0)" style="fill:#333"/>
+        </symbol>
+    </defs>
+</svg>
