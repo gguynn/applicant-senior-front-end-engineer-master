@@ -31,7 +31,7 @@ if ( ! function_exists( 'sfee_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="posted-on">' . $posted_on . '</span> '; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -44,10 +44,10 @@ if ( ! function_exists( 'sfee_posted_by' ) ) :
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'sfee' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span> '
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="byline"> ' . $byline . '</span> '; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -63,14 +63,14 @@ if ( ! function_exists( 'sfee_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'sfee' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sfee' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sfee' ) . '</span> ', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'sfee' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'sfee' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'sfee' ) . '</span> ', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -80,7 +80,7 @@ if ( ! function_exists( 'sfee_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'sfee' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span> ', 'sfee' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -90,14 +90,14 @@ if ( ! function_exists( 'sfee_entry_footer' ) ) :
 					wp_kses_post( get_the_title() )
 				)
 			);
-			echo '</span>';
+			echo '</span> ';
 		}
 
 		edit_post_link(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'sfee' ),
+					__( 'Edit <span class="screen-reader-text">%s</span> ', 'sfee' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -107,7 +107,7 @@ if ( ! function_exists( 'sfee_entry_footer' ) ) :
 				wp_kses_post( get_the_title() )
 			),
 			'<span class="edit-link">',
-			'</span>'
+			'</span> '
 		);
 	}
 endif;

@@ -2,6 +2,100 @@
    Site styles
    ========================================================================== */
 
+/* .site | root */
+
+.site {
+   padding: 4px;
+}
+
+/* .site-header */
+
+.site-header {
+   background-color: $color-branding;
+   color: $color-header-links-and-icons-and-search-input;
+   position: relative;
+   z-index: 2;
+
+   /* .site-branding */
+
+   .site-branding {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+      .site-title {
+         margin: 0;
+         padding: 0;
+         display: inline-block;
+
+         a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            line-height: $height-site-header-sm;
+         }
+      }
+   }
+
+   /* .main-navigation */
+
+   .main-navigation {
+      position: relative;
+      z-index: 1;
+      background-color: $color-search-and-small-screen-navigation;
+
+      .menu > ul,
+      .menu > ul > li,
+      .menu > ul > li > a {
+         display: block;
+         margin: 0;
+         padding: 0;
+      }
+
+      .menu {
+         > ul {
+            list-style: none;
+
+            li {
+               a {
+                  color: inherit;
+                  line-height: $height-site-header-sm;
+                  padding: 0 18px; /* TODO: make l/r padding variable */
+               }
+
+               &:not(:first-child) {
+                  a {
+                     border-top: 1px solid #5488c8; /* TODO: make color variable */
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   /* .menu-toggle, .search-toggle */
+
+   .menu-toggle,
+   .search-toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      height: $height-site-header-sm;
+      line-height: $height-site-header-sm;
+      width: $height-site-header-sm;
+      text-align: center;
+      color: inherit;
+      border: 0;
+      background-color: inherit;
+   }
+
+   .search-toggle {
+      left: auto;
+      right: 0;
+   }
+}
+
 /* ==========================================================================
    Media Queries for Responsive Design.
    ========================================================================== */

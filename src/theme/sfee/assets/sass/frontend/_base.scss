@@ -11,16 +11,24 @@
  */
 
 html {
-	color: #222;
-	font-size: 1em;
-	line-height: 1.4;
 	box-sizing: border-box;
+	font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: inherit;
+}
+
+body {
+    background-color: $color-header-links-and-icons-and-search-input;
+    color: $color-content-and-in-form-search-icon;
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size-content;
+    line-height: 1.4;
 }
 
 /*
