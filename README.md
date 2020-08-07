@@ -12,8 +12,6 @@ During this period, I took the following steps:
 
 #### Created WordPress Theme
 
-Theme Structure
-
 While it is noted `please do not use a starter theme to complete this exercise`, it is also noted `please build from as near scratch as you can`.  With that, I DID use WordPress Underscores starter theme, but stripped it down the barebones and built forward.  It was critical that specific standards that exist in WordPress Underscores were applied to this project.  Those include semantic markup, linter, sass complier, base classes assinged to elements, WP helper functions, WP template partials, and languages.  The theme was furthar updated to adhere as close as possible to theme standards defined in the [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
 
 At this point, both WordPress and the WordPress theme can be bundled together or separatly in version control.  The only expection is the database/sql file needs to be manually exported to the `src` folder.  That could be accomplished with a bash script.
