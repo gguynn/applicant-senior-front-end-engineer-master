@@ -1,5 +1,9 @@
 # Installation
 
+### Requirements
+
+- [Composer](https://getcomposer.org/)
+
 ### 1. Install WordPress via Composer
 ```bash
 composer install
