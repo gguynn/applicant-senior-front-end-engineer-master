@@ -1,10 +1,6 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
+/**
  * Hide visually and from screen readers
  */
 
@@ -13,7 +9,7 @@
 	display: none !important;
 }
 
-/*
+/**
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  *
@@ -34,7 +30,7 @@
 	width: 1px; /* 1 */
 }
 
-/*
+/**
  * Extends the .sr-only class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
@@ -51,7 +47,7 @@
 	width: auto;
 }
 
-/*
+/**
   * Hide visually and from screen readers, but maintain layout
   */
 
@@ -59,7 +55,7 @@
 	visibility: hidden;
 }
 
-/*
+/**
  * Clearfix: contain floats
  *
  * For modern browsers

@@ -311,13 +311,11 @@ template {
 /**
  * Theme Dimensions
  */
+/* Grid */
 /* Mobile */
 /* Desktop */
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-/* ==========================================================================
-   Base styles
-   ========================================================================== */
-/*
+/**
  * Apply a natural box layout model to all elements,
  * but allowing components to change
  * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -336,11 +334,11 @@ html {
 body {
   background-color: #fff;
   color: #333;
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 14px;
   line-height: 1.4; }
 
-/*
+/**
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
@@ -357,7 +355,7 @@ body {
   background: #b3d4fc;
   text-shadow: none; }
 
-/*
+/**
  * A better looking default horizontal rule
  */
 hr {
@@ -368,7 +366,7 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-/*
+/**
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
@@ -383,7 +381,7 @@ video {
   max-width: 100%;
   height: auto; }
 
-/*
+/**
  * Remove default fieldset styles.
  */
 fieldset {
@@ -391,28 +389,30 @@ fieldset {
   margin: 0;
   padding: 0; }
 
-/*
+/**
  * Allow only vertical resizing of textareas.
  */
 textarea {
   resize: vertical; }
 
-/* ==========================================================================
-   Site styles
-   ========================================================================== */
-/* .site | root */
+/**
+ * Root
+ */
 .site {
-  padding: 4px; }
+  padding: 4px;
+  /* TODO: make variable */ }
 
-/* .site-header */
+/**
+ * Header
+ */
 .site-header {
   background-color: #006ef5;
   color: #fff;
   position: relative;
   z-index: 2;
-  /* .site-branding */
-  /* .main-navigation */
-  /* .menu-toggle, .search-toggle */ }
+  /* Logo */
+  /* Buttons */
+  /* Navigation */ }
   .site-header .site-branding {
     position: relative;
     z-index: 1;
@@ -420,32 +420,23 @@ textarea {
     .site-header .site-branding .site-title {
       margin: 0;
       padding: 0;
-      display: inline-block; }
+      display: inline-block;
+      vertical-align: middle; }
       .site-header .site-branding .site-title a {
         color: inherit;
         text-decoration: none;
         display: block;
-        line-height: 53px; }
-  .site-header .main-navigation {
-    position: relative;
-    z-index: 1;
-    background-color: #004eae; }
-    .site-header .main-navigation .menu > ul,
-    .site-header .main-navigation .menu > ul > li,
-    .site-header .main-navigation .menu > ul > li > a {
-      display: block;
-      margin: 0;
-      padding: 0; }
-    .site-header .main-navigation .menu > ul {
-      list-style: none; }
-      .site-header .main-navigation .menu > ul li a {
-        color: inherit;
-        line-height: 53px;
-        padding: 0 18px;
-        /* TODO: make l/r padding variable */ }
-      .site-header .main-navigation .menu > ul li:not(:first-child) a {
-        border-top: 1px solid #5488c8;
-        /* TODO: make color variable */ }
+        /* logo */ }
+        .site-header .site-branding .site-title a .screen-reader-text {
+          line-height: 53px; }
+        .site-header .site-branding .site-title a::before {
+          display: inline-block;
+          vertical-align: middle;
+          height: 53px;
+          width: 43px;
+          /* TODO: make variable */
+          background: url(../../images/logo.svg) 50%/contain no-repeat;
+          content: ""; }
   .site-header .menu-toggle,
   .site-header .search-toggle {
     position: absolute;
@@ -453,19 +444,49 @@ textarea {
     left: 0;
     z-index: 2;
     height: 53px;
-    line-height: 53px;
     width: 53px;
     text-align: center;
     color: inherit;
     border: 0;
     background-color: inherit; }
+    .site-header .menu-toggle .icon.icon--close,
+    .site-header .search-toggle .icon.icon--close {
+      display: none; }
   .site-header .search-toggle {
     left: auto;
     right: 0; }
+  .site-header .main-navigation {
+    position: relative;
+    z-index: 1;
+    background-color: #004eae; }
+    .site-header .main-navigation .menu,
+    .site-header .main-navigation .menu > li,
+    .site-header .main-navigation .menu > li > a {
+      display: block;
+      margin: 0;
+      padding: 0; }
+    .site-header .main-navigation .menu {
+      list-style: none; }
+      .site-header .main-navigation .menu li > a {
+        color: inherit;
+        line-height: 53px;
+        padding: 0 18px;
+        /* TODO: make l/r padding variable */ }
+      .site-header .main-navigation .menu li:not(:first-child) > a {
+        border-top: 1px solid #5488c8;
+        /* TODO: make color variable */ }
+      .site-header .main-navigation .menu li.current-menu-item > a {
+        color: #ffc700; }
 
-/* ==========================================================================
-   Media Queries for Responsive Design.
-   ========================================================================== */
+/**
+ * Content
+ */
+.site-main {
+  padding: 20px; }
+
+/**
+ * Media Queries
+ */
 /* Style adjustments for viewports that meet the condition */
 /* @media only screen and (min-width: 35em) {} */
 /* Style adjustments for high resolution devices */
@@ -474,17 +495,14 @@ textarea {
 	(min-resolution: 1.25dppx),
 	(min-resolution: 120dpi) {} */
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
+/**
  * Hide visually and from screen readers
  */
 .hidden,
 [hidden] {
   display: none !important; }
 
-/*
+/**
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  *
@@ -504,7 +522,7 @@ textarea {
   width: 1px;
   /* 1 */ }
 
-/*
+/**
  * Extends the .sr-only class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
@@ -519,13 +537,13 @@ textarea {
   white-space: inherit;
   width: auto; }
 
-/*
+/**
   * Hide visually and from screen readers, but maintain layout
   */
 .invisible {
   visibility: hidden; }
 
-/*
+/**
  * Clearfix: contain floats
  *
  * For modern browsers
@@ -545,11 +563,10 @@ textarea {
   clear: both; }
 
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+/**
+ * Inlined to avoid the additional HTTP request:
+ * https://www.phpied.com/delay-loading-your-print-css/
+ */
 @media print {
   *,
   *::before,
@@ -566,7 +583,7 @@ textarea {
     content: " (" attr(href) ")"; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
-  /*
+  /**
 	 * Don't show links that are fragment identifiers,
 	 * or use the `javascript:` pseudo protocol
 	 */
@@ -579,7 +596,7 @@ textarea {
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-  /*
+  /**
 	 * Printing Tables:
 	 * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
 	 */

@@ -1,35 +1,31 @@
-# Notes/Logs for Review
+# Developer Notes/Logs for Review
 
 ### Aug 6, 12p-5p
 
 During this period, I took the following steps:
 
-#### Installed WordPress
+#### Installed WordPress core
 
 * Created a `composer.json` file configured to install WordPress in the `dist` directory.
 * Documented the installation process in the `README.md` file.
-* Skipped using environment variables since it's not part of this exercise.
+* Skipped using environment variables for this exercise.
 
-#### Created WordPress Theme
+#### Developed SFEE theme scaffolding
 
-While it is noted `please do not use a starter theme to complete this exercise`, it is also noted `please build from as near scratch as you can`.  With that, I DID use WordPress Underscores starter theme, but stripped it down the barebones and built forward.  Some base standards that exist in WordPress Underscores are standards that I wish to present in the exercise.  Those include semantic markup, linter, sass complier, base templates, base classes assinged to elements, WP helper functions, WP template partials, and languages.  The theme was furthar updated to adhere as closely as possible to theme standards defined in the [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
+Used WP Underscores starter theme to extract core (preferred standards) theme files and tools: semantic template scaffolding, linter, sass complier, base element classes, WP helpers, partials, includes, and languages.  Updates theme's base was structured to resemble [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
 
-At this point, both WordPress and the WordPress theme can be bundled together or separatly in version control.  The only expection is the database/sql file which needs to be manually exported to the `src` folder.  That could be accomplished with a bash script. That also isn't necessary the approach I would take for version control of the database.
+√, both WordPress core and theme can be bundled together (or separatly) in version control.  One expection is the sql database file in `src` which is manually exported.
 
-Finally, I spent time in the theme assets, specifically, the assets/sass folder.  I used a basic structure, introduced variables and partials. I used CSS from [HTML5 Boilerplate](https://html5boilerplate.com/) including base and helper classes and definitions.
+Next, tackled theme assets. Specifically, stylesheets.  Introduced variables and partials. Tested lining and compiling node scripts. Extractred CSS definitions from [HTML5 Boilerplate](https://html5boilerplate.com/) for base and helper classes.
 
-* Depending on scope, I mgiht have included `normailize.css` as an npm dependency.
-* Skipped minification, Babel, autoprefixing, and all other asset specific bundling since it's not part of this exercise.
-
-I'm now ready to start building out the Theme!
+* I could have included `normailize.css` as an npm dependency.
+* Skipped minification, Babel, autoprefixing, and all other asset specific bundling for this exercise.
 
 [MERGED PULL REQUEST](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
 ### Aug 6, 6p-
 
-#### Developed the theme styles and layouts
-
-Note: I won't be using any prettier or additional IDE settings to autoformat code.  I will rely soley my default IDE settings, .editorconfig and lint configuration.  Typically, I will include a VS Code settings.json file in version control.
+#### Developed SFEE theme styles and templates
 
 # Installation
 
@@ -50,20 +46,20 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 
 ### 3. Configure your database and copy theme foloder
 
-Note:
-* I will forgo using environment variables for this exercise.
-* This is a development project.  `WP_DEBUG` is set to `true`.
-
 1. Create a SQL database.  Mine is called: `eats`
 1. Import this SQL file into your database: `src/eats_2020-08-06.sql`
 1. Run: `cp src/wp-config.php dist/public/wp-config.php && cp -rf src/theme/sfee/ dist/public/wp-content/themes/sfee/`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
 
+Note: For this exercise, `WP_DEBUG` is set to `true`.
+
 ### 4. Login to WordPress
 
 [http://eats.test/wp-login.php](http://eats.test/wp-login.php)
-* user: demo
-* pass: Nn3hbaS7Qi1nXRv)KWJXaX*D
+
+user/pass:
+demo
+Nn3hbaS7Qi1nXRv)KWJXaX*D
 
 1. Login and click `Save Changes` on [Permalink Settings](http://eats.test/wp-admin/options-permalink.php)
 

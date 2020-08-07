@@ -99,7 +99,7 @@ msgid "Skip to content"
 msgstr ""
 
 #: header.php:54
-msgid "Menu"
+msgid "Primary Menu"
 msgstr ""
 
 #: header.php:55
