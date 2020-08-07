@@ -47,8 +47,8 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 ### 3. Configure your database and copy theme foloder
 
 1. Create a SQL database.  Mine is called: `eats`
-1. Import this SQL file into your database: `src/eats_2020-08-06.sql`
-1. Run: `cp src/wp-config.php dist/public/wp-config.php && cp -rf src/theme/sfee/ dist/public/wp-content/themes/sfee/`
+1. Import this SQL file into your database: `src/eats_2020-08-07.sql`
+1. Run: `cp src/wp-config.php dist/public/wp-config.php && cp -rf src/theme/sfee/ dist/public/wp-content/themes/sfee/ && cp -rf src/media/uploads/ dist/public/wp-content/uploads/`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
 
 Note: For this exercise, `WP_DEBUG` is set to `true`.
