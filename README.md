@@ -16,21 +16,18 @@ Theme Structure
 
 While there is a note that `Please do not use a starter theme to complete this exercise.`, it is also stated `please build from as near scratch as you can`.  With that, I DID use WordPress Underscores starter theme, but stripped it down the barebones and  built forward.  It was critical that specific standards that exist in WordPress Underscores were applied to this project.  Those include semantic markup, linter, sass complier, base classes assinged to elements, WP helper functions, and WP template partials.  The theme was furthar updated to adhere closely to the theme standards defined in the [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization)
 
-#### Created WordPress Theme
-
 At this point, both WordPress and the WordPress theme can be bundled together or separatly in version control.  The only expection is the database/sql file needs to be manually exported the the `src` folder.  That could be accomplished with a bash script.
 
 Theme assets can be compiled and linted.
 
-* I skipped Babel, minification and all other asset specific bundling since it's not part of this exercise.
-
 Finally, I spent time in the theme assets, specifically, the SASS files.  I used a basic structure, introduced variables and partials. I used CSS from [HTML5 Boilerplate](https://html5boilerplate.com/) including base and helper classes and definitions.
 
 * Depending on scope, I may have included `normailize.css` as an npm dependency.
+* I skipped Babel, minification, and all other asset specific bundling since it's not part of this exercise.
 
 I'm now ready to start building out the Theme!
 
-MERGED PULL REQUEST
+[MERGED PULL REQUEST](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
 # Installation
 
