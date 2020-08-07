@@ -17,7 +17,9 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 
 ### 3. Configure your database and copy theme foloder
 
-Note: I will forgo using environment variables for this exercise.
+Note:
+* I will forgo using environment variables for this exercise.
+* This is a development project.  `WP_DEBUG` is set to `true`.
 
 1. Create a SQL database.  Mine is called: `eats`
 1. Run: `cp src/wp-config.php dist/public/wp-config.php && cp -rf src/theme/sfee/ dist/public/wp-content/themes/sfee/`
