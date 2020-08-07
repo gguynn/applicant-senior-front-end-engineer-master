@@ -3,7 +3,7 @@
  */
 
 .site {
-	padding: 4px; /* TODO: make variable */
+	padding: $gutter-site;
 }
 
 /**
@@ -80,8 +80,6 @@
 
 	/* Navigation */
 	.main-navigation {
-		position: relative;
-		z-index: 1;
 		background-color: $color-search-and-small-screen-navigation;
 
 		.menu,
@@ -94,6 +92,7 @@
 
 		.menu {
 			list-style: none;
+			font-size: $font-size-navigation;
 
 			li {
 
@@ -119,6 +118,68 @@
 			}
 		}
 	}
+
+	/* Search Form */
+	.search-form {
+		background-color: $color-search-and-small-screen-navigation;
+		padding: $gutter-grid;
+
+		> form {
+			position: relative;
+
+			input,
+			button {
+				border: 0;
+				height: $height-search-input-sm;
+				font-size: $font-size-forms;
+				color: $color-content-and-in-form-search-icon;
+			}
+
+			/* search input */
+			> label {
+				position: relative;
+				z-index: 1;
+				display: block;
+				width: 100%;
+
+				.search-field {
+					background-color: $color-header-links-and-icons-and-search-input;
+					width: inherit;
+					padding: 0 14px; /* TODO: make padding variable */
+
+					/* adjust right padding for button will overlay */
+					padding-right: -webkit-calc(14px + #{$height-search-input-sm}); /* TODO: remove if using autoprefixer */
+					padding-right: calc(14px + #{$height-search-input-sm});
+
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						color: $color-meta-and-info-placeholder-text;
+					}
+
+					&::-moz-placeholder { /* Firefox 19+ */
+						color: $color-meta-and-info-placeholder-text;
+					}
+
+					&:-ms-input-placeholder { /* IE 10+ */
+						color: $color-meta-and-info-placeholder-text;
+					}
+
+					&:-moz-placeholder { /* Firefox 18- */
+						color: $color-meta-and-info-placeholder-text;
+					}
+				}
+			}
+
+			/* search button */
+			.search-submit {
+				background-color: transparent;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				right: 0;
+				width: $height-search-input-sm;
+			}
+		}
+	}
 }
 
 /**
@@ -126,7 +187,9 @@
  */
 
 .site-main {
-	padding: $grid-gutter-width;
+	position: relative;
+	z-index: 1;
+	padding: $gutter-grid;
 }
 
 /**

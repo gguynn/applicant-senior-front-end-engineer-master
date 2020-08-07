@@ -311,7 +311,7 @@ template {
 /**
  * Theme Dimensions
  */
-/* Grid */
+/* Gutters */
 /* Mobile */
 /* Desktop */
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
@@ -390,6 +390,34 @@ fieldset {
   padding: 0; }
 
 /**
+ * Remove border radius styles.
+ */
+input {
+  border-radius: 0; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+/**
+ * Clears the 'X' from Internet Explorer and Chrome.
+ */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+/**
  * Allow only vertical resizing of textareas.
  */
 textarea {
@@ -399,8 +427,7 @@ textarea {
  * Root
  */
 .site {
-  padding: 4px;
-  /* TODO: make variable */ }
+  padding: 4px; }
 
 /**
  * Header
@@ -412,7 +439,8 @@ textarea {
   z-index: 2;
   /* Logo */
   /* Buttons */
-  /* Navigation */ }
+  /* Navigation */
+  /* Search Form */ }
   .site-header .site-branding {
     position: relative;
     z-index: 1;
@@ -456,8 +484,6 @@ textarea {
     left: auto;
     right: 0; }
   .site-header .main-navigation {
-    position: relative;
-    z-index: 1;
     background-color: #004eae; }
     .site-header .main-navigation .menu,
     .site-header .main-navigation .menu > li,
@@ -466,7 +492,8 @@ textarea {
       margin: 0;
       padding: 0; }
     .site-header .main-navigation .menu {
-      list-style: none; }
+      list-style: none;
+      font-size: 18px; }
       .site-header .main-navigation .menu li > a {
         color: inherit;
         line-height: 53px;
@@ -477,11 +504,59 @@ textarea {
         /* TODO: make color variable */ }
       .site-header .main-navigation .menu li.current-menu-item > a {
         color: #ffc700; }
+  .site-header .search-form {
+    background-color: #004eae;
+    padding: 20px; }
+    .site-header .search-form > form {
+      position: relative;
+      /* search input */
+      /* search button */ }
+      .site-header .search-form > form input,
+      .site-header .search-form > form button {
+        border: 0;
+        height: 45px;
+        font-size: 16px;
+        color: #333; }
+      .site-header .search-form > form > label {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%; }
+        .site-header .search-form > form > label .search-field {
+          background-color: #fff;
+          width: inherit;
+          padding: 0 14px;
+          /* TODO: make padding variable */
+          /* adjust right padding for button will overlay */
+          padding-right: -webkit-calc(14px + 45px);
+          /* TODO: remove if using autoprefixer */
+          padding-right: calc(14px + 45px); }
+          .site-header .search-form > form > label .search-field::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #767676; }
+          .site-header .search-form > form > label .search-field::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #767676; }
+          .site-header .search-form > form > label .search-field:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #767676; }
+          .site-header .search-form > form > label .search-field:-moz-placeholder {
+            /* Firefox 18- */
+            color: #767676; }
+      .site-header .search-form > form .search-submit {
+        background-color: transparent;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 45px; }
 
 /**
  * Content
  */
 .site-main {
+  position: relative;
+  z-index: 1;
   padding: 20px; }
 
 /**

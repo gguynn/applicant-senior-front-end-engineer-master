@@ -40,7 +40,7 @@ composer install
 
 ### 2. Map DNS to the public directory
 
-Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map the domain: http://eats.test
+Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map the domain: `http://eats.test`
 
 `cd dist/public && valet link eats && cd ../../`
 

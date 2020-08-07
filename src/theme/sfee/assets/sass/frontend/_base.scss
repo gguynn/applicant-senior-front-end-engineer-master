@@ -88,6 +88,41 @@ fieldset {
 }
 
 /**
+ * Remove border radius styles.
+ */
+
+input {
+	border-radius: 0;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+/**
+ * Clears the 'X' from Internet Explorer and Chrome.
+ */
+
+input[type="search"]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+input[type="search"]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+
+/**
  * Allow only vertical resizing of textareas.
  */
 

@@ -18,11 +18,14 @@ $color-header-links-and-icons-and-search-input: #fff;
  * Theme Dimensions
  */
 
-/* Grid */
-$grid-gutter-width: 20px;
+/* Gutters */
+$gutter-site: 4px;
+$gutter-grid: 20px;
 
 /* Mobile */
 $height-site-header-sm: 53px;
+$height-search-input-sm: 45px;
 
 /* Desktop */
 $height-site-header-lg: 53px;
+$height-search-input-lg: 45px;
