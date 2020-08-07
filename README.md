@@ -37,9 +37,9 @@ Tommorrow:
 
 * Add media queries for larger sreens.
 * Update and complete template partials, specifically, .type-post in both content and excerpt contexts.
-* Devlop UI interactions (menu and search toggle) via jQuery or vanilla JS (including appropriate aria specifications).
-* Should add notes to README explaining decision not to use fixed headers (admin bar, pushing down content with acitive dropdowns).  Not taking liberties, etc.
-* Should add installation notes that developer can pluck theme folder from source vs. following the install instructions.
+* Develop UI interactions (menu and search toggle) via jQuery or vanilla JS (including appropriate aria specifications).
+* Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties, etc.
+* Should add installation notes that developer can pluck theme folder from source and setting up own WP vs. following the install instructions.
 
 # Installation
 
