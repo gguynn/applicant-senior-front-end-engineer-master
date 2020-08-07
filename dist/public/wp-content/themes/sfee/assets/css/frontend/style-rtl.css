@@ -499,20 +499,26 @@ textarea {
     .site-header .main-navigation .menu > ul {
       list-style: none;
       font-size: 18px; }
-      .site-header .main-navigation ul.menu li > a,
-      .site-header .main-navigation .menu > ul li > a {
-        color: inherit;
-        line-height: 53px;
-        padding: 0 18px;
-        /* TODO: make l/r padding variable */ }
-      .site-header .main-navigation ul.menu li:not(:first-child) > a,
-      .site-header .main-navigation .menu > ul li:not(:first-child) > a {
-        border-top: 1px solid #5488c8;
-        /* TODO: make color variable */ }
-      .site-header .main-navigation ul.menu li.current-menu-item > a, .site-header .main-navigation ul.menu li.current_page_item > a,
-      .site-header .main-navigation .menu > ul li.current-menu-item > a,
-      .site-header .main-navigation .menu > ul li.current_page_item > a {
-        color: #ffc700; }
+      .site-header .main-navigation ul.menu li,
+      .site-header .main-navigation .menu > ul li {
+        /**
+				* defined .current-menu-item and .current_page_item  so that navigation is formatted
+				* regardless if menu is assigned to Primary Display Location or not
+				*/ }
+        .site-header .main-navigation ul.menu li > a,
+        .site-header .main-navigation .menu > ul li > a {
+          color: inherit;
+          line-height: 53px;
+          padding: 0 18px;
+          /* TODO: make l/r padding variable */ }
+        .site-header .main-navigation ul.menu li:not(:first-child) > a,
+        .site-header .main-navigation .menu > ul li:not(:first-child) > a {
+          border-top: 1px solid #5488c8;
+          /* TODO: make color variable */ }
+        .site-header .main-navigation ul.menu li.current-menu-item > a, .site-header .main-navigation ul.menu li.current_page_item > a,
+        .site-header .main-navigation .menu > ul li.current-menu-item > a,
+        .site-header .main-navigation .menu > ul li.current_page_item > a {
+          color: #ffc700; }
   .site-header .search-form {
     background-color: #004eae;
     padding: 20px; }
