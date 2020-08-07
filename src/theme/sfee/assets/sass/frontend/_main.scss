@@ -115,11 +115,13 @@
 				}
 
 				/**
-				* defined .current-menu-item and .current_page_item  so that navigation is formatted
-				* regardless if menu is assigned to Primary Display Location or not
+				* defined .current-menu-item and .current_page_item
+				* so that navigation is formatted regardless if
+				* menu is assigned to Primary Display Location or not
 				*/
 				&.current-menu-item,
-				&.current_page_item {
+				&.current_page_item,
+				&.current_page_parent {
 
 					> a {
 						color: $color-navigation-highlight;
