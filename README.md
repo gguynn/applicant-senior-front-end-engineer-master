@@ -19,11 +19,17 @@ At this point, both WordPress and the WordPress theme can be bundled together or
 Finally, I spent time in the theme assets, specifically, the assets/sass folder.  I used a basic structure, introduced variables and partials. I used CSS from [HTML5 Boilerplate](https://html5boilerplate.com/) including base and helper classes and definitions.
 
 * Depending on scope, I mgiht have included `normailize.css` as an npm dependency.
-* Skipped minification, Babel, and all other asset specific bundling since it's not part of this exercise.
+* Skipped minification, Babel, autoprefixing, and all other asset specific bundling since it's not part of this exercise.
 
 I'm now ready to start building out the Theme!
 
 [MERGED PULL REQUEST](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
+
+### Aug 6, 6p-
+
+#### Developed the theme styles and layouts
+
+Note: I won't be using any prettier or additional IDE settings to autoformat code.  I will rely soley my default IDE settings, .editorconfig and lint configuration.  Typically, I will include a VS Code settings.json file in version control.
 
 # Installation
 
@@ -58,6 +64,8 @@ Note:
 [http://eats.test/wp-login.php](http://eats.test/wp-login.php)
 * user: demo
 * pass: Nn3hbaS7Qi1nXRv)KWJXaX*D
+
+1. Login and click `Save Changes` on [Permalink Settings](http://eats.test/wp-admin/options-permalink.php)
 
 # 10up Senior Front End Engineering Technical Challenge
 Your task is to create the attached design within a WordPress theme environment. The theme should use a WordPress menu for the main navigation, a standard loop output for displaying the article under the navigation, and the WP search. All the necessary design files are inside this directory as well as any information you need to complete the exercise.
