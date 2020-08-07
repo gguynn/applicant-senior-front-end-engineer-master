@@ -61,19 +61,19 @@ Raleway: https://fonts.google.com/specimen/Raleway
 - Gutters are in increments of 5px although most are set to 20px
 
 ## Design Files
-- /assets/Designs/SFEE__Large-Screen.png (Default large screen state with navigation item hovered/focused)
-- /assets/Designs/SFEE__Large Screen--Search.png (Search open)
-- /assets/Designs/SFEE__Small-Screen.png (Default small screen state with navigation item hovered/focused)
-- /assets/Designs/SFEE__Small-Screen--Navigation.png (Navigation open)
-- /assets/Designs/SFEE__Small-Screen--Search-Open.png (Search open)
-- /assets/Designs/SFEE__Small-Screen--Search-Filled.png (Search open and filled)
+- /project/Designs/SFEE__Large-Screen.png (Default large screen state with navigation item hovered/focused)
+- /project/Designs/SFEE__Large Screen--Search.png (Search open)
+- /project/Designs/SFEE__Small-Screen.png (Default small screen state with navigation item hovered/focused)
+- /project/Designs/SFEE__Small-Screen--Navigation.png (Navigation open)
+- /project/Designs/SFEE__Small-Screen--Search-Open.png (Search open)
+- /project/Designs/SFEE__Small-Screen--Search-Filled.png (Search open and filled)
 
 ## Icons
-- /assets/Icons/cheveron-right.svg
-- /assets/Icons/close.svg
-- /assets/Icons/menu.svg
-- /assets/Icons/search.svg
+- /project/Icons/cheveron-right.svg
+- /project/Icons/close.svg
+- /project/Icons/menu.svg
+- /project/Icons/search.svg
 
 ## Images
-- /assets/Images/logo.svg
-- /assets/Images/sandwich.png
+- /project/Images/logo.svg
+- /project/Images/sandwich.png
