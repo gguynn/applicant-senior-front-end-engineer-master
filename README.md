@@ -21,15 +21,17 @@ Next, tackled theme assets. Specifically, stylesheets. Introduced variables and 
 * I could have included `normailize.css` as an npm dependency.
 * Skipped minification, Babel, autoprefixing, and all other asset specific bundling for this exercise.
 
-[MERGED PULL REQUEST](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
+[MERGED PULL REQUEST 1](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
 ### Aug 6, 6p-1a
 
 #### Developed SFEE theme styles, templates, and functions
 
-Wrote template markup (HTML/PHP) and stylesheets in sass. Worked with template tags and functions. Bounced around quite a bit and commented my commits the best I could. The theme is nearly laid out and complete.
+Wrote template markup (HTML/PHP) and stylesheets in sass. Worked with template tags and functions. Bounced around quite a bit and commented my commits the best I could. The theme is mostly laid out and complete.
 
 Note: The stylesheet appoach is mobile-first. 
+
+[MERGED PULL REQUEST 2](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/2)
 
 Tommorrow: 
 
