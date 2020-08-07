@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89b15db785dafa54181abe51d83b7bcc",
+    "content-hash": "b39aa5a04f73d56fc5a9b8fd60bb182f",
     "packages": [
         {
             "name": "johnpbloch/wordpress",

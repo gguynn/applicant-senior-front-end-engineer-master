@@ -35,3 +35,26 @@ function sfee_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'sfee_pingback_header' );
+
+/**
+ *  Search Form
+ */
+function sfee_search_form( $form ) { 
+	$form = '<div class="search-form">
+		<form role="search" method="get" action="' . home_url( '/' ) . '">
+			<label>
+				<span class="screen-reader-text sr-only">' . __( 'Search for:',  'sfee') . '</span>
+				<input type="search" class="search-field" placeholder="' . esc_attr__( 'e.g. delicious sandwiches', 'sfee') . '" value="" name="s">
+			</label>
+			<button type="submit" class="search-submit">
+				<svg class="icon" width="19px" height="19px">' .
+					sprintf( '<use xlink:href="%s/menu-icons.svg#icon-search-submit"></use>', get_stylesheet_directory_uri() . '/assets/images' ) . 
+				'</svg>
+				<span class="screen-reader-text sr-only">' . esc_html( 'Search', 'sfee' ) . '</span>
+			</button>
+		</form>
+	</div>';
+
+	return $form;
+}
+add_filter( 'get_search_form', 'sfee_search_form' );

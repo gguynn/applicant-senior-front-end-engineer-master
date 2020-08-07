@@ -9,6 +9,7 @@
  * @package SFEE
  */
 
+return; /* There is no footer defined in the comps. */
 ?>
 
 	<footer id="colophon" class="site-footer">

@@ -18,6 +18,8 @@
 if ( post_password_required() ) {
 	return;
 }
+
+return; /* There are not comments defined in the comps. */
 ?>
 
 <div id="comments" class="comments-area">
