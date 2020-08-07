@@ -12,20 +12,30 @@ During this period, I took the following steps:
 
 #### Developed SFEE theme scaffolding
 
-Used WP Underscores starter theme to extract core (preferred standards) theme files and tools: semantic template scaffolding, linter, sass complier, base element classes, WP helpers, partials, includes, and languages.  Updates theme's base was structured to resemble [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
+Used WP Underscores starter theme to extract core (preferred standards) theme files and tools: semantic template scaffolding, linter, sass complier, base element classes, WP helpers, partials, includes, and languages. Updates theme's base was structured to resemble [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
 
-√, both WordPress core and theme can be bundled together (or separatly) in version control.  One expection is the sql database file in `src` which is manually exported.
+√, both WordPress core and theme can be bundled together (or separatly) in version control. One expection is the sql database file in `src` which is manually exported.
 
-Next, tackled theme assets. Specifically, stylesheets.  Introduced variables and partials. Tested lining and compiling node scripts. Extractred CSS definitions from [HTML5 Boilerplate](https://html5boilerplate.com/) for base and helper classes.
+Next, tackled theme assets. Specifically, stylesheets. Introduced variables and partials. Tested lining and compiling node scripts. Extractred CSS definitions from [HTML5 Boilerplate](https://html5boilerplate.com/) for base and helper classes.
 
 * I could have included `normailize.css` as an npm dependency.
 * Skipped minification, Babel, autoprefixing, and all other asset specific bundling for this exercise.
 
 [MERGED PULL REQUEST](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
-### Aug 6, 6p-
+### Aug 6, 6p-1a
 
-#### Developed SFEE theme styles and templates
+#### Developed SFEE theme styles, templates, and functions
+
+Wrote template markup (HTML/PHP) and stylesheets in sass. Worked with template tags and functions. Bounced around quite a bit and commented my commits the best I could. The theme is nearly laid out and complete.
+
+Note: The stylesheet appoach is mobile-first. 
+
+Tommorrow: 
+
+* Add media queries for larger sreens.
+* Update and complete template partials, specifically, .type-post in both content and excerpt contexts.
+* Devlop UI interactions (menu and search toggle) via jQuery or vanilla JS (including appropriate aria specifications).
 
 # Installation
 
@@ -46,7 +56,7 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 
 ### 3. Configure your database and copy theme foloder
 
-1. Create a SQL database.  Mine is called: `eats`
+1. Create a SQL database. Mine is called: `eats`
 1. Import this SQL file into your database: `src/eats_2020-08-07.sql`
 1. Run: `cp src/wp-config.php dist/public/wp-config.php && cp -rf src/theme/sfee/ dist/public/wp-content/themes/sfee/ && cp -rf src/media/uploads/ dist/public/wp-content/uploads/`
 1. Update the database name and credentials in: `dist/public/wp-config.php`
