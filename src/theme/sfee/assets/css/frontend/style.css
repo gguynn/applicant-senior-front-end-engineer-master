@@ -476,14 +476,41 @@ textarea {
     text-align: center;
     color: inherit;
     border: 0;
-    background-color: inherit; }
-    .site-header .menu-toggle .icon.icon--close,
-    .site-header .search-toggle .icon.icon--close {
+    background-color: inherit;
+    display: block;
+    cursor: pointer; }
+    .site-header .menu-toggle .icon,
+    .site-header .search-toggle .icon {
+      margin: 0 auto;
+      display: block; }
+    .site-header .menu-toggle .icon--close,
+    .site-header .search-toggle .icon--close {
+      display: none; }
+    .site-header .menu-toggle:hover, .site-header .menu-toggle:focus, .site-header .menu-toggle.is-active,
+    .site-header .search-toggle:hover,
+    .site-header .search-toggle:focus,
+    .site-header .search-toggle.is-active {
+      background-color: #004eae; }
+    .site-header .menu-toggle.is-active .icon--close,
+    .site-header .search-toggle.is-active .icon--close {
+      display: block; }
+    .site-header .menu-toggle.is-active .icon--open,
+    .site-header .search-toggle.is-active .icon--open {
       display: none; }
   .site-header .search-toggle {
     left: auto;
     right: 0; }
+  .site-header .is-collapsable {
+    will-change: height;
+    -webkit-transform: translateZ(0);
+    /* TODO: remove if using autoprefixer */
+    transform: translateZ(0);
+    /* improves animation performance */
+    -webkit-backface-visibility: hidden;
+    /* TODO: remove if using autoprefixer */
+    backface-visibility: hidden; }
   .site-header .main-navigation {
+    display: none;
     background-color: #004eae;
     /**
 		 * defined ul.menu and .menu > ul so that navigation is formatted
@@ -502,8 +529,9 @@ textarea {
       .site-header .main-navigation ul.menu li,
       .site-header .main-navigation .menu > ul li {
         /**
-				* defined .current-menu-item and .current_page_item  so that navigation is formatted
-				* regardless if menu is assigned to Primary Display Location or not
+				* defined .current-menu-item and .current_page_item
+				* so that navigation is formatted regardless if
+				* menu is assigned to Primary Display Location or not
 				*/ }
         .site-header .main-navigation ul.menu li > a,
         .site-header .main-navigation .menu > ul li > a {
@@ -511,6 +539,10 @@ textarea {
           line-height: 53px;
           padding: 0 18px;
           /* TODO: make l/r padding variable */ }
+          .site-header .main-navigation ul.menu li > a:hover, .site-header .main-navigation ul.menu li > a:focus,
+          .site-header .main-navigation .menu > ul li > a:hover,
+          .site-header .main-navigation .menu > ul li > a:focus {
+            color: #ffc700; }
         .site-header .main-navigation ul.menu li:not(:first-child) > a,
         .site-header .main-navigation .menu > ul li:not(:first-child) > a {
           border-top: 1px solid #5488c8;
@@ -520,6 +552,7 @@ textarea {
         .site-header .main-navigation .menu > ul li.current_page_item > a {
           color: #ffc700; }
   .site-header .search-form {
+    display: none;
     background-color: #004eae;
     padding: 20px; }
     .site-header .search-form > form {
@@ -564,7 +597,9 @@ textarea {
         z-index: 2;
         top: 0;
         right: 0;
-        width: 45px; }
+        width: 45px;
+        display: block;
+        cursor: pointer; }
 
 /**
  * Content
@@ -572,7 +607,33 @@ textarea {
 .site-main {
   position: relative;
   z-index: 1;
-  padding: 20px; }
+  padding: 20px;
+  line-height: 1.6; }
+  .site-main a {
+    color: #cc4b00; }
+  .site-main .entry-title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0; }
+  .site-main .entry-meta {
+    color: #767676; }
+    .site-main .entry-meta > p {
+      margin-bottom: 0; }
+  .site-main .entry-meta ~ .entry-title {
+    margin: 0; }
+  .site-main .hentry:not(:first-of-type) {
+    margin-top: 20px; }
+  .site-main .read-more {
+    /* chevron right */ }
+    .site-main .read-more > span, .site-main .read-more::after {
+      display: inline-block;
+      vertical-align: middle; }
+    .site-main .read-more::after {
+      height: 13px;
+      width: 13px;
+      content: "";
+      background: url(../../images/chevron-right.svg) 100% 50%/contain no-repeat; }
 
 /**
  * Media Queries

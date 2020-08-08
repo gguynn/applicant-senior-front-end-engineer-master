@@ -1,99 +1,85 @@
 /**
  * File navigation.js.
  *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
+ * Handles toggling the navigation and search menu
  */
-( function() {
-	const siteNavigation = document.getElementById( 'site-navigation' );
+( function($) {
+	const $masthead = $( '#masthead' ); // Site Header
+	const $buttons = $masthead.find( '> button[class*="-toggle"]' ),
+		$containers = $masthead.find( '> .is-collapsable' );
 
-	// Return early if the navigation don't exist.
-	if ( ! siteNavigation ) {
-		return;
+	// Default options
+	const options = {
+		duration: 200 // Animation duration
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	// Handle document click
+	const handleDocumentClick = function() {
+		const { duration } = options;
 
-	// Return early if the button don't exist.
-	if ( 'undefined' === typeof button ) {
-		return;
+		// Remove active states from all other buttons and containers
+		$buttons.removeClass( 'is-active' );
+		$buttons.attr( 'aria-expanded', false );
+		$containers.slideUp( duration );
+
+		// Remove document event listener
+		document.removeEventListener( 'click', handleDocumentClick );
+
+		// Remove focus from search field
+		const $searchField = $containers.find( '.search-field ');
+		if ( $searchField ) {
+			$searchField.blur();
+		}
 	}
 
-	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
+	// Handle button click
+	$masthead.on( 'click', 'button[class*="-toggle"]', function(e) {
+		e.preventDefault();
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
+		const $button = $(this);
+		const $container = $masthead.find( `#${$button.attr( 'aria-controls' )}` );
 
-	if ( ! menu.classList.contains( 'nav-menu' ) ) {
-		menu.classList.add( 'nav-menu' );
-	}
+		const { duration } = options;
 
-	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
-	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
+		// Remove active states from all other buttons and containers
+		$buttons.not( $button ).removeClass( 'is-active' );
+		$buttons.not( $button ).attr( 'aria-expanded', false );
+		$containers.not( $container ).slideUp( duration );
 
-		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
-			button.setAttribute( 'aria-expanded', 'false' );
+		// Remove document event listener
+		document.removeEventListener( 'click', handleDocumentClick );
+
+		// Update state
+		if ( $button.hasClass( 'is-active' ) ) {
+			// Add active state to this button and container
+			$button.removeClass( 'is-active' );
+			$button.attr( 'aria-expanded', false );
+			$container.slideUp( duration );
+
+			// Remove document event listener
+			document.removeEventListener( 'click', handleDocumentClick );
+
+			// Remove focus from search field
+			const $searchField = $container.find( '.search-field ');
+			if ( $searchField ) {
+				$searchField.blur();
+			}
 		} else {
-			button.setAttribute( 'aria-expanded', 'true' );
-		}
-	} );
+			// Remove active state from this button and container
+			$button.addClass( 'is-active' );
+			$button.attr( 'aria-expanded', true );
+			$container.slideDown( duration );
 
-	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
+			// Add document event listener
+			document.addEventListener( 'click', handleDocumentClick );
 
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
-
-	// Get all the link elements within the menu.
-	const links = menu.getElementsByTagName( 'a' );
-
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
-
-	// Toggle focus each time a menu link is focused or blurred.
-	for ( const link of links ) {
-		link.addEventListener( 'focus', toggleFocus, true );
-		link.addEventListener( 'blur', toggleFocus, true );
-	}
-
-	// Toggle focus each time a menu link with children receive a touch event.
-	for ( const link of linksWithChildren ) {
-		link.addEventListener( 'touchstart', toggleFocus, false );
-	}
-
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		if ( event.type === 'focus' || event.type === 'blur' ) {
-			let self = this;
-			// Move up through the ancestors of the current link until we hit .nav-menu.
-			while ( ! self.classList.contains( 'nav-menu' ) ) {
-				// On li elements toggle the class .focus.
-				if ( 'li' === self.tagName.toLowerCase() ) {
-					self.classList.toggle( 'focus' );
-				}
-				self = self.parentNode;
+			// Add focus to search field
+			const $searchField = $container.find( '.search-field ');
+			if ( $searchField ) {
+				$searchField.focus();
 			}
 		}
 
-		if ( event.type === 'touchstart' ) {
-			const menuItem = this.parentNode;
-			event.preventDefault();
-			for ( const link of menuItem.parentNode.children ) {
-				if ( menuItem !== link ) {
-					link.classList.remove( 'focus' );
-				}
-			}
-			menuItem.classList.toggle( 'focus' );
-		}
-	}
-}() );
+		return false;
+	});
+}(jQuery) );

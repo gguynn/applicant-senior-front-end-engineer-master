@@ -38,7 +38,6 @@
 				}
 
 				/* logo */
-
 				&::before {
 					display: inline-block;
 					vertical-align: middle;
@@ -64,10 +63,31 @@
 		color: inherit;
 		border: 0;
 		background-color: inherit;
+		display: block;
+		cursor: pointer;
 
 		.icon {
+			margin: 0 auto;
+			display: block;
+		}
 
-			&.icon--close {
+		.icon--close {
+			display: none;
+		}
+
+		&:hover,
+		&:focus,
+		&.is-active {
+			background-color: $color-search-and-small-screen-navigation;
+		}
+
+		&.is-active {
+
+			.icon--close {
+				display: block;
+			}
+
+			.icon--open {
 				display: none;
 			}
 		}
@@ -78,8 +98,17 @@
 		right: 0;
 	}
 
+	.is-collapsable {
+		will-change: height;
+		-webkit-transform: translateZ(0); /* TODO: remove if using autoprefixer */
+		transform: translateZ(0); /* improves animation performance */
+		-webkit-backface-visibility: hidden;; /* TODO: remove if using autoprefixer */
+		backface-visibility: hidden;
+	}
+
 	/* Navigation */
 	.main-navigation {
+		display: none;
 		background-color: $color-search-and-small-screen-navigation;
 
 		ul,
@@ -105,6 +134,11 @@
 					color: inherit;
 					line-height: $height-site-header-sm;
 					padding: 0 18px; /* TODO: make l/r padding variable */
+
+					&:hover,
+					&:focus {
+						color: $color-navigation-highlight;
+					}
 				}
 
 				&:not(:first-child) {
@@ -115,8 +149,9 @@
 				}
 
 				/**
-				* defined .current-menu-item and .current_page_item  so that navigation is formatted
-				* regardless if menu is assigned to Primary Display Location or not
+				* defined .current-menu-item and .current_page_item
+				* so that navigation is formatted regardless if
+				* menu is assigned to Primary Display Location or not
 				*/
 				&.current-menu-item,
 				&.current_page_item {
@@ -131,6 +166,7 @@
 
 	/* Search Form */
 	.search-form {
+		display: none;
 		background-color: $color-search-and-small-screen-navigation;
 		padding: $gutter-grid;
 
@@ -187,6 +223,8 @@
 				top: 0;
 				right: 0;
 				width: $height-search-input-sm;
+				display: block;
+				cursor: pointer;
 			}
 		}
 	}
@@ -200,6 +238,51 @@
 	position: relative;
 	z-index: 1;
 	padding: $gutter-grid;
+	line-height: 1.6;
+
+	a {
+		color: $color-links;
+	}
+
+	.entry-title {
+		font-size: $font-size-headings;
+		font-weight: 400;
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	.entry-meta {
+		color: $color-meta-and-info-placeholder-text;
+
+		> p {
+			margin-bottom: 0;
+		}
+	}
+
+	.entry-meta ~ .entry-title {
+		margin: 0;
+	}
+
+	.hentry:not(:first-of-type) {
+		margin-top: $gutter-grid;
+	}
+
+	.read-more {
+
+		> span,
+		&::after {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		/* chevron right */
+		&::after {
+			height: 13px;
+			width: 13px;
+			content: "";
+			background: url(../../images/chevron-right.svg) 100% 50%/contain no-repeat;
+		}
+	}
 }
 
 /**
