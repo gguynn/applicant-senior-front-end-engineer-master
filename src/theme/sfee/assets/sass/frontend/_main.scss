@@ -383,6 +383,14 @@
 	/* Medium Screens */
 	@media only screen and (min-width: 768px) {
 
+		.read-more {
+
+			/* chevron right */
+			&::after {
+				width: 21px;
+			}
+		}
+
 		/* Row */
 		.row--2-1 {
 			display: flex;
@@ -407,13 +415,5 @@
 	@media only screen and (min-width: 960px) {
 
 		padding: $gutter-size ($gutter-size * 2);
-
-		.read-more {
-
-			/* chevron right */
-			&::after {
-				width: 21px;
-			}
-		}
 	}
 }

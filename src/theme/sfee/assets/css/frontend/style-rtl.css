@@ -696,6 +696,10 @@ textarea {
   @media only screen and (min-width: 768px) {
     .site-main {
       /* Row */ }
+      .site-main .read-more {
+        /* chevron right */ }
+        .site-main .read-more::after {
+          width: 21px; }
       .site-main .row--2-1 {
         display: flex;
         gap: 20px;
@@ -708,11 +712,7 @@ textarea {
             width: 33.33333%; } }
   @media only screen and (min-width: 960px) {
     .site-main {
-      padding: 20px 40px; }
-      .site-main .read-more {
-        /* chevron right */ }
-        .site-main .read-more::after {
-          width: 21px; } }
+      padding: 20px 40px; } }
 
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 /**
