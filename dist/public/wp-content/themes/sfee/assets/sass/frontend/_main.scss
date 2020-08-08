@@ -247,8 +247,9 @@
 					.screen-reader-text {
 						display: inline-block;
 						vertical-align: middle;
-						margin-left: 12px;
-						line-height: $header-size;
+						margin-left: 13px;
+						line-height: 1;
+						margin-top: 1px;
 						font-size: $font-size-forms;
 						font-weight: 600;
 					}
