@@ -75,8 +75,7 @@ Thanks for taking the time to review this exercise! I'm happy to submit revision
 
 All the best,
 
-Garrett Guynn
-applicant for SFEE role at 10up
+Garrett Guynn, applicant for SFEE role at 10up
 
 - [LinkedIn](https://www.linkedin.com/in/gguynn/)
 - [Resume/CV](https://drive.google.com/file/d/1rrmjnK1JJNBSNrrO-xhZhWxjcC0AQKIk/view?usp=sharing)
