@@ -43,9 +43,10 @@
 - Added markup and styles for entry partials.
 - Added hover and focus states.
 - Added UI interactions (menu and search toggle) via jQuery with aria specifications and active states.
-- Added media queries for larger screens.
 
 [MERGED PULL REQUEST 3](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/3)
+
+- Added media queries for larger screens.
 
 Next:
 - Test site on os, browser and devices with various screen sizes.
