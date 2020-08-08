@@ -44,6 +44,8 @@
 - Added hover and focus states.
 - Added UI interactions (menu and search toggle) via jQuery with aria specifications and active states.
 
+[MERGED PULL REQUEST 3](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/3)
+
 Next:
 - Add media queries for larger screens.
 - Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties with hover/focus states, animations, etc.
