@@ -130,6 +130,10 @@
 			padding: 0;
 		}
 
+		/**
+		 * defined ul.menu and .menu > ul so that navigation is formatted
+		 * regardless if menu is assigned to Primary Display Location or not
+		 */
 		ul.menu,
 		.menu > ul {
 			list-style: none;
@@ -267,6 +271,10 @@
 			display: block !important;
 			height: auto !important;
 
+			/**
+			 * defined ul.menu and .menu > ul so that navigation is formatted
+			 * regardless if menu is assigned to Primary Display Location or not
+			 */
 			ul.menu,
 			.menu > ul {
 				font-size: $font-size-forms;

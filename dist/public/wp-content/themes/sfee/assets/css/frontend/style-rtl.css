@@ -522,7 +522,11 @@ textarea {
     backface-visibility: hidden; }
   .site-header .main-navigation {
     display: none;
-    background-color: #004eae; }
+    background-color: #004eae;
+    /**
+		 * defined ul.menu and .menu > ul so that navigation is formatted
+		 * regardless if menu is assigned to Primary Display Location or not
+		 */ }
     .site-header .main-navigation ul,
     .site-header .main-navigation ul > li,
     .site-header .main-navigation ul > li > a {
@@ -621,7 +625,11 @@ textarea {
         display: none; }
       .site-header .main-navigation {
         display: block !important;
-        height: auto !important; }
+        height: auto !important;
+        /**
+			 * defined ul.menu and .menu > ul so that navigation is formatted
+			 * regardless if menu is assigned to Primary Display Location or not
+			 */ }
         .site-header .main-navigation ul.menu,
         .site-header .main-navigation .menu > ul {
           font-size: 16px; }
