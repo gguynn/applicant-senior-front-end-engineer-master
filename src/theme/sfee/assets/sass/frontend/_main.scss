@@ -1,9 +1,19 @@
 /**
- * Root
+ * main.scss
+ *
+ * Breakpoints:
+ * Medium Screens >= 768px
+ * Large Screens >= 960px
+ */
+
+/**
+ * Page root
  */
 
 .site {
-	padding: $gutter-site;
+	max-width: $site-max-width;
+	padding: $site-padding;
+	margin: 0 auto;
 }
 
 /**
@@ -32,16 +42,17 @@
 				color: inherit;
 				text-decoration: none;
 				display: block;
+				padding: 0 $gutter-size;
 
 				.screen-reader-text {
-					line-height: $height-site-header-sm;
+					display: none;
 				}
 
 				/* logo */
 				&::before {
 					display: inline-block;
 					vertical-align: middle;
-					height: $height-site-header-sm;
+					height: $header-size;
 					width: 43px; /* TODO: make variable */
 					background: url(../../images/logo.svg) 50%/contain no-repeat;
 					content: "";
@@ -57,8 +68,8 @@
 		top: 0;
 		left: 0;
 		z-index: 2;
-		height: $height-site-header-sm;
-		width: $height-site-header-sm;
+		height: $header-size;
+		padding: 0 $gutter-size;
 		text-align: center;
 		color: inherit;
 		border: 0;
@@ -102,7 +113,7 @@
 		will-change: height;
 		-webkit-transform: translateZ(0); /* TODO: remove if using autoprefixer */
 		transform: translateZ(0); /* improves animation performance */
-		-webkit-backface-visibility: hidden;; /* TODO: remove if using autoprefixer */
+		-webkit-backface-visibility: hidden; /* TODO: remove if using autoprefixer */
 		backface-visibility: hidden;
 	}
 
@@ -132,12 +143,13 @@
 
 				> a {
 					color: inherit;
-					line-height: $height-site-header-sm;
+					line-height: $header-size;
 					padding: 0 18px; /* TODO: make l/r padding variable */
 
 					&:hover,
 					&:focus {
 						color: $color-navigation-highlight;
+						background-color: $color-hover-and-focus-in-navigation;
 					}
 				}
 
@@ -158,6 +170,7 @@
 
 					> a {
 						color: $color-navigation-highlight;
+						background-color: $color-hover-and-focus-in-navigation;
 					}
 				}
 			}
@@ -168,7 +181,7 @@
 	.search-form {
 		display: none;
 		background-color: $color-search-and-small-screen-navigation;
-		padding: $gutter-grid;
+		padding: $gutter-size;
 
 		> form {
 			position: relative;
@@ -176,7 +189,7 @@
 			input,
 			button {
 				border: 0;
-				height: $height-search-input-sm;
+				height: $input-size;
 				font-size: $font-size-forms;
 				color: $color-content-and-in-form-search-icon;
 			}
@@ -194,8 +207,8 @@
 					padding: 0 14px; /* TODO: make padding variable */
 
 					/* adjust right padding for button will overlay */
-					padding-right: -webkit-calc(14px + #{$height-search-input-sm}); /* TODO: remove if using autoprefixer */
-					padding-right: calc(14px + #{$height-search-input-sm});
+					padding-right: -webkit-calc(14px + #{$input-size}); /* TODO: remove if using autoprefixer */
+					padding-right: calc(14px + #{$input-size});
 
 					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 						color: $color-meta-and-info-placeholder-text;
@@ -222,22 +235,125 @@
 				z-index: 2;
 				top: 0;
 				right: 0;
-				width: $height-search-input-sm;
+				width: $input-size;
 				display: block;
 				cursor: pointer;
+			}
+		}
+	}
+
+	/* Medium Screens */
+	@media only screen and (min-width: 768px) {
+
+		/* Logo */
+		.site-branding {
+			text-align: left;
+
+			.site-title {
+
+				a {
+
+					.screen-reader-text {
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: 12px;
+						line-height: $header-size;
+						font-size: $font-size-forms;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		/* Buttons */
+		.menu-toggle {
+			display: none;
+		}
+
+		/* Navigation */
+		.main-navigation {
+			display: block !important;
+			height: auto !important;
+
+			/**
+			 * defined ul.menu and .menu > ul so that navigation is formatted
+			 * regardless if menu is assigned to Primary Display Location or not
+			 */
+			ul.menu,
+			.menu > ul {
+
+				li {
+					display: inline-block;
+					vertical-align: top;
+
+					> a {
+						padding: 0 $gutter-size; /* TODO: make l/r padding variable */
+					}
+
+					&:not(:first-child) {
+
+						> a {
+							border-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* Large Screens */
+	@media only screen and (min-width: 960px) {
+
+		/* Logo */
+		.site-branding {
+			margin-left: $gutter-size;
+		}
+
+		/* Buttons */
+		.search-toggle {
+			right: $gutter-size;
+		}
+
+		/* Navigation */
+		.main-navigation {
+			padding: 0 $gutter-size;
+
+			/**
+			 * defined ul.menu and .menu > ul so that navigation is formatted
+			 * regardless if menu is assigned to Primary Display Location or not
+			 */
+			ul.menu,
+			.menu > ul {
+				font-size: $font-size-forms;
+			}
+		}
+
+		/* Search Form */
+		.search-form {
+			position: absolute;
+			top: $header-size;
+			right: $gutter-size;
+			z-index: 2;
+
+			> form {
+
+				/* search input */
+				> label {
+					width: 320px;
+				}
 			}
 		}
 	}
 }
 
 /**
- * Content
+ * Main Content
  */
 
 .site-main {
 	position: relative;
 	z-index: 1;
-	padding: $gutter-grid;
+	padding: $gutter-size;
 	line-height: 1.6;
 
 	a {
@@ -264,7 +380,7 @@
 	}
 
 	.hentry:not(:first-of-type) {
-		margin-top: $gutter-grid;
+		margin-top: $gutter-size;
 	}
 
 	.read-more {
@@ -283,19 +399,41 @@
 			background: url(../../images/chevron-right.svg) 100% 50%/contain no-repeat;
 		}
 	}
+
+	/* Medium Screens */
+	@media only screen and (min-width: 768px) {
+
+		/* Row */
+		.row--2-1 {
+			display: flex;
+			gap: $gutter-size;
+			justify-content: space-between;
+
+			.col {
+				flex-direction: column;
+
+				&.left {
+					width: 66.66667%;
+				}
+
+				&.right {
+					width: 33.33333%;
+				}
+			}
+		}
+	}
+
+	/* Large Screens */
+	@media only screen and (min-width: 960px) {
+
+		padding: $gutter-size ($gutter-size * 2);
+
+		.read-more {
+
+			/* chevron right */
+			&::after {
+				width: 21px;
+			}
+		}
+	}
 }
-
-/**
- * Media Queries
- */
-
-/* Style adjustments for viewports that meet the condition */
-
-/* @media only screen and (min-width: 35em) {} */
-
-/* Style adjustments for high resolution devices */
-
-/* @media print,
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 1.25dppx),
-	(min-resolution: 120dpi) {} */

@@ -43,7 +43,7 @@ function sfee_search_form( $form ) {
 	$form = '<form role="search" method="get" action="' . home_url( '/' ) . '">
 		<label>
 			<span class="screen-reader-text sr-only">' . __( 'Search for:',  'sfee') . '</span>
-			<input type="search" class="search-field" placeholder="' . esc_attr__( 'e.g. delicious sandwiches', 'sfee') . '" value="" name="s">
+			<input type="search" class="search-field" placeholder="' . esc_attr__( 'e.g. delicious sandwiches', 'sfee') . '" value="" name="s" autocomplete="off" />
 		</label>
 		<button type="submit" class="search-submit">
 			<svg class="icon" width="19px" height="19px">' .
