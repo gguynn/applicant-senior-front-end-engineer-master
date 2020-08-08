@@ -82,7 +82,7 @@ Garrett Guynn, applicant for SFEE role at 10up
 
 # Installation
 
-You may follow the installation instructions below, or build your own WordPress instance using any of the assets located in the `src` directory.
+You may follow the installation instructions below, or build your own WordPress instance using any of the assets located in the [src](https://github.com/gguynn/applicant-senior-front-end-engineer-master/tree/master/src) directory.
 
 ### Requirements
 
