@@ -35,7 +35,7 @@
 
 [MERGED PULL REQUEST 2](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/2)
 
-### Aug 7, 12p-
+### Aug 7, 12p-6p
 
 #### Theme Development: Content
 
