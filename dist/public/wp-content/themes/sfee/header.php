@@ -58,7 +58,7 @@
 
 		<button class="search-toggle" aria-controls="search-form" aria-expanded="false">
 			<!-- search is closed -->
-			<svg class="icon" width="19px" height="19px">
+			<svg class="icon icon--open" width="19px" height="19px">
 				<?php echo sprintf( '<use xlink:href="%s/menu-icons.svg#icon-search"></use>', get_stylesheet_directory_uri() . '/assets/images' ); ?>
 			</svg>
 
@@ -69,8 +69,13 @@
 			<span class="screen-reader-text sr-only"><?php esc_html_e( 'Search', 'sfee' ); ?></span>
 		</button>
 
+		<!-- search form -->
+		<div id="search-form" class="search-form is-collapsable">
+			<?php get_search_form(); ?>
+		</div>
+
 		<!-- navigation -->
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="primary-menu" class="main-navigation is-collapsable">
 			<?php
 			wp_nav_menu(
 				array(
@@ -79,8 +84,5 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
-
-		<!-- search form -->
-		<?php get_search_form(); ?>
+		</nav><!-- .main-navigation -->
 	</header><!-- #masthead -->

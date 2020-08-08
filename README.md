@@ -42,11 +42,12 @@
 - Added/updated partials and tags for main content.
 - Added markup and styles for entry partials.
 - Added hover and focus states.
+- Added UI interactions (menu and search toggle) via jQuery with aria specifications and active states.
 
 Next:
-- Add UI interactions (menu and search toggle) via jQuery with aria specifications and active states.
 - Add media queries for larger screens.
 - Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties with hover/focus states, animations, etc.
+- Should explain reasoning for jQuery and not overabstrating easy to read JS code.
 - Add installation notes about developer being able to pluck theme folder from source and setting up own WP.
 
 # Installation
