@@ -2,46 +2,52 @@
 
 ### Aug 6, 12p-5p
 
-During this period, I took the following steps:
+#### Setup WordPress Environment (Root CLI)
 
-#### Installed WordPress core
+- Added Composer configuration and installed WP via Composer.
+- Added documentation to README.
+- Added database and site: Eats.
+- Added repo and initial commit.
+- * Skipped using environment variables for this exercise.
 
-- Created a `composer.json` file configured to install WordPress in the `dist` directory.
-- Documented the installation process in the `README.md` file.
-- Skipped using environment variables for this exercise.
+#### Added SFEE Theme (Theme CLI)
 
-#### Developed SFEE theme scaffolding
+- Added theme files from WP Underscores (test/build scripts, functions, template files, languages, comments) excluding any CSS.
+- Organized structure similar to [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
+- Added theme assets.
+- Added sass variables and partials.
+- Tested and compiled styles and scripts including Composer build scripts.
+- Added initial CSS basing on [HTML5 Boilerplate](https://html5boilerplate.com/) and normalize.
+- * Skipped using minification, Babel, autoprefixing, and all other asset specific bundling for this exercise. Used manual linting and IDE.
 
-Used WP Underscores starter theme to extract core (preferred standards) theme files and tools: semantic template scaffolding, linter, sass complier, base element classes, WP helpers, partials, includes, and languages. Updates theme's base was structured to resemble [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
-
-√. Both WordPress core and theme can be bundled together (or separatly) in version control. One expection is the sql database file in `src` which is manually exported.
-
-Next, tackled theme assets. Specifically, stylesheets. Introduced variables and partials. Tested lining and compiling node scripts. Extractred CSS definitions from [HTML5 Boilerplate](https://html5boilerplate.com/) for base and helper classes.
-
-- I could have included `normailize.css` as an npm dependency.
-- Skipped minification, Babel, autoprefixing, and all other asset specific bundling for this exercise.
+√ Core and Theme files can be bundled, compiled, and version control independently.
 
 [MERGED PULL REQUEST 1](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
 ### Aug 6, 6p-12a
 
-#### Developed SFEE theme styles, templates, and functions
+#### Theme Development: Root
 
-Wrote template markup and stylesheets in sass. Worked with template tags and functions. Bounced around quite a bit and commented my commits the best I could. The theme is mostly laid out and complete.
-
-Note: The stylesheet appoach is mobile-first. 
+- Added root components: header, navigation, search, content and styles.
+- Added pages, menu items, logo, and styles.
+- Added svg to buttons.
+- Added search form and styles.
 
 [MERGED PULL REQUEST 2](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/2)
 
-Tommorrow: 
-
-- Add media queries for larger screens.
-- Update and complete template partials, specifically, .type-post in both content and excerpt contexts.
-- Develop UI interactions (menu and search toggle) via jQuery or vanilla JS (including appropriate aria specifications).
-- Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties, etc.
-- Should add installation notes that developer can pluck theme folder from source and setting up own WP vs. following the install instructions.
-
 ### Aug 7, 12p-
+
+#### Theme Development: Content
+
+- Added/updated partials and tags for main content.
+- Added markup and styles for entry partials.
+- Added hover and focus states.
+
+Next:
+- Add UI interactions (menu and search toggle) via jQuery with aria specifications and active states.
+- Add media queries for larger screens.
+- Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties with hover/focus states, animations, etc.
+- Add installation notes about developer being able to pluck theme folder from source and setting up own WP.
 
 # Installation
 
