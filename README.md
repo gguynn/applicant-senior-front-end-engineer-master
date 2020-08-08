@@ -46,10 +46,16 @@
 
 [MERGED PULL REQUEST 3](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/3)
 
+### Aug 7, 8a-12p
+
+#### Theme Development: Breakpoints and Testing
+
 - Added media queries for larger screens.
+- * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly.  There were no "gotchas" in this example.  Adding styles for larger screens was strait-forward.
+- Published to staging @ [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
+- Tested site on different OSs, browsers and devicess with various screen sizes.
 
 Next:
-- Test site on os, browser and devices with various screen sizes.
 - Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties with hover/focus states, animations, etc.
 - Should explain reasoning for jQuery and not overabstrating easy to read JS code.
 - Add installation notes about developer being able to pluck theme folder from source and setting up own WP.
