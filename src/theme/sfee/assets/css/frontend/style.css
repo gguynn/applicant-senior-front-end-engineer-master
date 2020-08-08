@@ -480,6 +480,10 @@ textarea {
     .site-header .menu-toggle .icon.icon--close,
     .site-header .search-toggle .icon.icon--close {
       display: none; }
+    .site-header .menu-toggle:hover, .site-header .menu-toggle:focus,
+    .site-header .search-toggle:hover,
+    .site-header .search-toggle:focus {
+      background-color: #004eae; }
   .site-header .search-toggle {
     left: auto;
     right: 0; }
@@ -516,10 +520,9 @@ textarea {
         .site-header .main-navigation .menu > ul li:not(:first-child) > a {
           border-top: 1px solid #5488c8;
           /* TODO: make color variable */ }
-        .site-header .main-navigation ul.menu li.current-menu-item > a, .site-header .main-navigation ul.menu li.current_page_item > a, .site-header .main-navigation ul.menu li.current_page_parent > a,
+        .site-header .main-navigation ul.menu li.current-menu-item > a, .site-header .main-navigation ul.menu li.current_page_item > a,
         .site-header .main-navigation .menu > ul li.current-menu-item > a,
-        .site-header .main-navigation .menu > ul li.current_page_item > a,
-        .site-header .main-navigation .menu > ul li.current_page_parent > a {
+        .site-header .main-navigation .menu > ul li.current_page_item > a {
           color: #ffc700; }
   .site-header .search-form {
     background-color: #004eae;
@@ -574,7 +577,33 @@ textarea {
 .site-main {
   position: relative;
   z-index: 1;
-  padding: 20px; }
+  padding: 20px;
+  line-height: 1.6; }
+  .site-main a {
+    color: #cc4b00; }
+  .site-main .entry-title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0; }
+  .site-main .entry-meta {
+    color: #767676; }
+    .site-main .entry-meta > p {
+      margin-bottom: 0; }
+  .site-main .entry-meta ~ .entry-title {
+    margin: 0; }
+  .site-main .hentry:not(:first-of-type) {
+    margin-top: 20px; }
+  .site-main .read-more {
+    /* chevron right */ }
+    .site-main .read-more > span, .site-main .read-more::after {
+      display: inline-block;
+      vertical-align: middle; }
+    .site-main .read-more::after {
+      height: 13px;
+      width: 13px;
+      content: "";
+      background: url(../../images/chevron-right.svg) 100% 50%/contain no-repeat; }
 
 /**
  * Media Queries

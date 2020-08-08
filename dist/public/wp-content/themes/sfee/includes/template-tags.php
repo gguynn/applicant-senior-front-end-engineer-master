@@ -82,3 +82,15 @@ if ( ! function_exists( 'sfee_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'sfee_read_more' ) ) :
+	/**
+	 * Displays a permalink to the post
+	 */
+	function sfee_read_more() {
+		echo sprintf(
+			'<p class="read-more"><a href="%s" rel="bookmark"><span>' . esc_html__( 'Read More', 'sfee' ) . '</span></a></p>',
+			esc_url( get_permalink() )
+		);
+	}
+endif;

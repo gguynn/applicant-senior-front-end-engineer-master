@@ -50,7 +50,7 @@ function sfee_search_form( $form ) {
 				<svg class="icon" width="19px" height="19px">' .
 					sprintf( '<use xlink:href="%s/menu-icons.svg#icon-search-submit"></use>', get_stylesheet_directory_uri() . '/assets/images' ) . 
 				'</svg>
-				<span class="screen-reader-text sr-only">' . esc_html( 'Search', 'sfee' ) . '</span>
+				<span class="screen-reader-text sr-only">' . esc_html__( 'Search', 'sfee' ) . '</span>
 			</button>
 		</form>
 	</div>';
