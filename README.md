@@ -59,26 +59,31 @@
 
 ### Summary
 
-*Total hours:* 20
+Total hours: *20*
 
-#### Re: Animation / UI
+#### Animation and State (UI/UX)
 
-I chose not to use a fixed/sticky header since it was not explicitly requested.  I would have needed to add styles considering the admin bar and possibly independently animate the main content to push down (not recommended).  I will reach out to Creative for direction for these situations.  I will not take liberties by adding "bells and whistles", except when instructed to.  Those include animations, active & hover states, sticky elements (to name a few).  With the navigation, it made sense to slide it up/down because the main content was pushed up/down.  Upon review, if changes were requested,  I would easily execute revisions.
+I chose not to use a fixed header because it was not explicitly requested.  Consideration for the admin bar would be made if the header was fixed.  In a team setting, I will ask Creative or Project Management for direction.  I won't take liberties except when instructed to for all UI/UX.  I work only with what information I have and always request the information I need.
 
-#### Re: jQuery vs Vanilla JS
+#### Vanilla JS vs jQuery
 
-I chose not to over-abstract for JavaScript [navigation.js](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js) and kept it simple. I chose jQuery to allow for maximum readabilty.
+I decided against any over-abstraction for and kept it simple re: [navigation.js](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js). jQuery was used to maximize readability.
 
-#### Final Thoughts
+#### Final Notes
 
-Thank you for taking the time to review this excercise. Any feedback you have would be appreated. I would be happy to submit any revisions or additional exercises at your request.
+Thanks for taking the time to review this exercise! I'm happy to submit revisions or more exercises upon request. Any feedback is greatly appreciated so that I may continue to improve my FE skills.
 
--- Garrett Guynn
+All the best,
+
+Garrett Guynn
+applicant for SFEE role at 10up
 
 - [LinkedIn](https://www.linkedin.com/in/gguynn/)
 - [Resume/CV](https://drive.google.com/file/d/1rrmjnK1JJNBSNrrO-xhZhWxjcC0AQKIk/view?usp=sharing)
 
 # Installation
+
+You may follow the installation instructions below, or build your own WordPress instance using any of the assets located in the `src` directory.
 
 ### Requirements
 
