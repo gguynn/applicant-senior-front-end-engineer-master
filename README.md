@@ -46,19 +46,37 @@
 
 [MERGED PULL REQUEST 3](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/3)
 
-### Aug 7, 8a-12p
+### Aug 7, 9a-12p
 
 #### Theme Development: Breakpoints and Testing
 
 - Added media queries for larger screens.
-- * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly.  There were no "gotchas" in this example.  Adding styles for larger screens was strait-forward.
+- * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly. There were no "gotchas" in this example. Adding styles for larger screens was strait-forward.
 - Published to staging @ [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
 - Tested site on different OSs, browsers and devicess with various screen sizes.
 
-Next:
-- Should add notes to README explaining decision not to use fixed header (admin bar, pushing down content with acitive dropdowns).  Not taking liberties with hover/focus states, animations, etc.
-- Should explain reasoning for jQuery and not overabstrating easy to read JS code.
-- Add installation notes about developer being able to pluck theme folder from source and setting up own WP.
+[MERGED PULL REQUEST 4](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/4)
+
+### Summary
+
+*Total hours:* 20
+
+#### Re: Animation / UI
+
+I chose not to use a fixed/sticky header since it was not explicitly requested.  I would have needed to add styles considering the admin bar and possibly independently animate the main content to push down (not recommended).  I will reach out to Creative for direction for these situations.  I will not take liberties by adding "bells and whistles", except when instructed to.  Those include animations, active & hover states, sticky elements (to name a few).  With the navigation, it made sense to slide it up/down because the main content was pushed up/down.  Upon review, if changes were requested,  I would easily execute revisions.
+
+#### Re: jQuery vs Vanilla JS
+
+I chose not to over-abstract for JavaScript [navigation.js](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js) and kept it simple. I chose jQuery to allow for maximum readabilty.
+
+#### Final Thoughts
+
+Thank you for taking the time to review this excercise. Any feedback you have would be appreated. I would be happy to submit any revisions or additional exercises at your request.
+
+-- Garrett Guynn
+
+- [LinkedIn](https://www.linkedin.com/in/gguynn/)
+- [Resume/CV](https://drive.google.com/file/d/1rrmjnK1JJNBSNrrO-xhZhWxjcC0AQKIk/view?usp=sharing)
 
 # Installation
 
