@@ -35,6 +35,8 @@
 
 	// Closure
 	( function( { $siteHeader, $buttons, $containers, defaultOptions } ) {
+		let $searchField; // Avoid memory leaks
+
 		// Handle external click
 		const handleExternalClick = ( { options } ) => {
 			const { duration, easing, externalEl } = options;
@@ -48,7 +50,7 @@
 			externalEl.removeEventListener( 'click', handleExternalClick );
 
 			// Remove focus from search field
-			const $searchField = $containers.find( '.search-field ' );
+			$searchField = $containers.find( '.search-field ' );
 			if ( $searchField ) {
 				$searchField.blur();
 			}
@@ -68,7 +70,7 @@
 			$container.slideDown( duration, easing.enter );
 
 			// Add focus to search field (if exists)
-			const $searchField = $container.find( '.search-field ' );
+			$searchField = $container.find( '.search-field ' );
 			if ( $searchField ) {
 				$searchField.focus();
 			}
@@ -87,7 +89,7 @@
 			$container.slideUp( duration, easing.leave );
 
 			// Remove focus from search field (if exists)
-			const $searchField = $container.find( '.search-field ' );
+			$searchField = $container.find( '.search-field ' );
 			if ( $searchField ) {
 				$searchField.blur();
 			}
