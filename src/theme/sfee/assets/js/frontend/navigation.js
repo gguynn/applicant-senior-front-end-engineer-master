@@ -2,100 +2,136 @@
  * File navigation.js.
  *
  * Handles toggling the navigation and search menu
+ * Depends on jQuery
+ *
+ * Author: GGuynn
  */
 ( function( $ ) {
-	const $masthead = $( '#masthead' ); // Site Header
-	const $buttons = $masthead.find( '> button[class*="-toggle"]' ),
-		$containers = $masthead.find( '> .is-collapsable' );
-	const $primary = $( '#primary' ); // Site Main
+	// Setup
+	const sfeeNavigation = () => {
+		const $siteHeader = $( '#masthead' ); // Site Header
 
-	// Helper functions
-	const easeInSine = function( x, t, b, c, d ) {
-		return ( -c * Math.cos( t / d * ( Math.PI / 2 ) ) ) + c + b;
+		return {
+			$siteHeader,
+			$buttons: $siteHeader.find( '> button[class*="toggle--"]' ),
+			$containers: $siteHeader.find( '> .is-collapsable' ),
+			defaultOptions: {
+				// Animation duration
+				duration: 200,
+				// Animation timing function
+				easing: {
+					enter: ( x, t, b, c, d ) => {
+						return ( c * Math.sin( t / d * ( Math.PI / 2 ) ) ) + b;
+					},
+					leave: ( x, t, b, c, d ) => {
+						return ( -c * Math.cos( t / d * ( Math.PI / 2 ) ) ) + c + b;
+					},
+				},
+				// External element when clicked hides all menus
+				externalEl: $( '#primary' )[ 0 ], // Site Main
+			},
+		};
 	};
 
-	const easeOutSine = function( x, t, b, c, d ) {
-		return ( c * Math.sin( t / d * ( Math.PI / 2 ) ) ) + b;
-	};
+	// Closure
+	( function( { $siteHeader, $buttons, $containers, defaultOptions } ) {
+		// Handle external click
+		const handleExternalClick = ( { options } ) => {
+			const { duration, easing, externalEl } = options;
 
-	// Default options
-	const options = {
-		// Animation duration
-		duration: 200,
-		// Animation timing function
-		easing: {
-			enter: easeOutSine,
-			leave: easeInSine,
-		},
-	};
+			// Remove active states from all other buttons and containers
+			$buttons.removeClass( 'is-active' );
+			$buttons.attr( 'aria-expanded', false );
+			$containers.slideUp( duration, easing.leave );
 
-	// Handle document click
-	const handleDocumentClick = function() {
-		const { duration, easing } = options;
-
-		// Remove active states from all other buttons and containers
-		$buttons.removeClass( 'is-active' );
-		$buttons.attr( 'aria-expanded', false );
-		$containers.slideUp( duration, easing.leave );
-
-		// Remove document event listener
-		$primary[ 0 ].removeEventListener( 'click', handleDocumentClick );
-
-		// Remove focus from search field
-		const $searchField = $containers.find( '.search-field ' );
-		if ( $searchField ) {
-			$searchField.blur();
-		}
-	};
-
-	// Handle button click
-	$masthead.on( 'click', 'button[class*="-toggle"]', function( e ) {
-		e.preventDefault();
-
-		const $button = $( this );
-		const $container = $masthead.find( `#${ $button.attr( 'aria-controls' ) }` );
-
-		const { duration, easing } = options;
-
-		// Remove active states from all other buttons and containers
-		$buttons.not( $button ).removeClass( 'is-active' );
-		$buttons.not( $button ).attr( 'aria-expanded', false );
-		$containers.not( $container ).slideUp( duration, easing.leave );
-
-		// Remove document event listener
-		$primary[ 0 ].removeEventListener( 'click', handleDocumentClick );
-
-		// Update state
-		if ( $button.hasClass( 'is-active' ) ) {
-			// Add active state to this button and container
-			$button.removeClass( 'is-active' );
-			$button.attr( 'aria-expanded', false );
-			$container.slideUp( duration, easing.leave );
-
-			// Remove document event listener
-			$primary[ 0 ].removeEventListener( 'click', handleDocumentClick );
+			// Remove external click event listener
+			externalEl.removeEventListener( 'click', handleExternalClick );
 
 			// Remove focus from search field
-			const $searchField = $container.find( '.search-field ' );
+			const $searchField = $containers.find( '.search-field ' );
 			if ( $searchField ) {
 				$searchField.blur();
 			}
-		} else {
+		};
+
+		const onExternalClick = () => {
+			return handleExternalClick( { options: defaultOptions } );
+		};
+
+		// Show the navigation or search menu
+		const showCurrentMenu = ( { $button, $container, options } ) => {
+			const { duration, easing, externalEl } = options;
+
 			// Remove active state from this button and container
 			$button.addClass( 'is-active' );
 			$button.attr( 'aria-expanded', true );
 			$container.slideDown( duration, easing.enter );
 
-			// Add document event listener
-			$primary[ 0 ].addEventListener( 'click', handleDocumentClick );
-
-			// Add focus to search field
+			// Add focus to search field (if exists)
 			const $searchField = $container.find( '.search-field ' );
 			if ( $searchField ) {
 				$searchField.focus();
 			}
-		}
 
-		return false;
-	} );
+			// Add document event listener
+			externalEl.addEventListener( 'click', onExternalClick );
+		};
+
+		// Hide the navigation or search menu
+		const hideCurrentMenu = ( { $button, $container, options } ) => {
+			const { duration, easing, externalEl } = options;
+
+			// Add active state to this button and container
+			$button.removeClass( 'is-active' );
+			$button.attr( 'aria-expanded', false );
+			$container.slideUp( duration, easing.leave );
+
+			// Remove focus from search field (if exists)
+			const $searchField = $container.find( '.search-field ' );
+			if ( $searchField ) {
+				$searchField.blur();
+			}
+
+			// Remove esternal click event listener
+			externalEl.removeEventListener( 'click', onExternalClick );
+		};
+
+		// Hides all menus except current
+		const hideAllMenusExceptCurrent = ( { $button, $container, options } ) => {
+			const { duration, easing, externalEl } = options;
+
+			// Remove active states from all other buttons and containers
+			$buttons.not( $button ).removeClass( 'is-active' );
+			$buttons.not( $button ).attr( 'aria-expanded', false );
+			$containers.not( $container ).slideUp( duration, easing.leave );
+
+			// Remove external click event listener
+			externalEl.removeEventListener( 'click', onExternalClick );
+		};
+
+		// Handle button click (passive)
+		$siteHeader.on( 'click', 'button[class*="toggle--"]', function( e ) {
+			e.preventDefault();
+
+			const $button = $( this );
+
+			const current = {
+				$button,
+				$container: $siteHeader.find( `#${ $button.attr( 'aria-controls' ) }` ),
+				options: defaultOptions,
+			};
+
+			// Hides all menus except current
+			hideAllMenusExceptCurrent( current );
+
+			// Hide or show the navigation or search menu
+			if ( $button.hasClass( 'is-active' ) ) {
+				hideCurrentMenu( current );
+			} else {
+				showCurrentMenu( current );
+			}
+
+			return false;
+		} );
+	}( sfeeNavigation() ) );
 }( window.jQuery ) );
