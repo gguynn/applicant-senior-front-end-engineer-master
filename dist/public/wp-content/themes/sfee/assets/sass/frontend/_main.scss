@@ -53,7 +53,7 @@
 					display: inline-block;
 					vertical-align: middle;
 					height: $header-size;
-					width: 43px; /* TODO: make variable */
+					width: 43px;
 					background: url(../../images/logo.svg) 50%/contain no-repeat;
 					content: "";
 				}
@@ -62,8 +62,7 @@
 	}
 
 	/* Buttons */
-	.menu-toggle,
-	.search-toggle {
+	.toggle {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -102,11 +101,11 @@
 				display: none;
 			}
 		}
-	}
 
-	.search-toggle {
-		left: auto;
-		right: 0;
+		&.toggle--search {
+			left: auto;
+			right: 0;
+		}
 	}
 
 	.is-collapsable {
@@ -144,7 +143,7 @@
 				> a {
 					color: inherit;
 					line-height: $header-size;
-					padding: 0 18px; /* TODO: make l/r padding variable */
+					padding: 0 $font-size-navigation;
 
 					&:hover,
 					&:focus {
@@ -156,7 +155,7 @@
 				&:not(:first-child) {
 
 					> a {
-						border-top: 1px solid #5488c8; /* TODO: make color variable */
+						border-top: 1px solid $color-small-screen-navigation-border;
 					}
 				}
 
@@ -199,7 +198,7 @@
 				.search-field {
 					background-color: $color-header-links-and-icons-and-search-input;
 					width: inherit;
-					padding: 0 14px; /* TODO: make padding variable */
+					padding: 0 $font-size-content;
 
 					/* adjust right padding for button will overlay */
 					padding-right: -webkit-calc(14px + #{$input-size}); /* TODO: remove if using autoprefixer */
@@ -262,8 +261,11 @@
 		}
 
 		/* Buttons */
-		.menu-toggle {
-			display: none;
+		.toggle {
+
+			&.toggle--menu {
+				display: none;
+			}
 		}
 
 		/* Navigation */
@@ -284,7 +286,7 @@
 					vertical-align: top;
 
 					> a {
-						padding: 0 $gutter-size; /* TODO: make l/r padding variable */
+						padding: 0 $gutter-size;
 					}
 
 					&:not(:first-child) {
@@ -307,8 +309,11 @@
 		}
 
 		/* Buttons */
-		.search-toggle {
-			right: $gutter-size;
+		.toggle {
+
+			.toggle--search {
+				right: $gutter-size;
+			}
 		}
 
 		/* Navigation */
@@ -400,20 +405,23 @@
 		}
 
 		/* Row */
-		.row--2-1 {
-			display: flex;
-			gap: $gutter-size;
-			justify-content: space-between;
+		.row {
 
-			.col {
-				flex-direction: column;
+			&.row--2-1 {
+				display: flex;
+				gap: $gutter-size;
+				justify-content: space-between;
 
-				&.left {
-					width: 66.66667%;
-				}
+				.col {
+					flex-direction: column;
 
-				&.right {
-					width: 33.33333%;
+					&.left {
+						width: 66.66667%;
+					}
+
+					&.right {
+						width: 33.33333%;
+					}
 				}
 			}
 		}

@@ -56,7 +56,7 @@
 			<span class="screen-reader-text sr-only"><?php esc_html_e( 'Primary Menu', 'sfee' ); ?></span>
 		</button>
 
-		<button class="toggle--search" aria-controls="search-form" aria-expanded="false">
+		<button class="toggle toggle--search" aria-controls="search-form" aria-expanded="false">
 			<!-- search is closed -->
 			<svg class="icon icon--open" width="19px" height="19px">
 				<?php echo sprintf( '<use xlink:href="%s/menu-icons.svg#icon-search"></use>', get_stylesheet_directory_uri() . '/assets/images' ); ?>
