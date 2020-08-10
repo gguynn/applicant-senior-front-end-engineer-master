@@ -25,6 +25,8 @@
 
 [MERGED PULL REQUEST 1](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
+*SUBMIT FOR REVIEW: Dev-ops?*
+
 ### Aug 6, 6p-12a
 
 #### Theme Development: Core Components
@@ -35,8 +37,6 @@
 - Added search form and styles.
 
 [MERGED PULL REQUEST 2](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/2)
-
-*SUBMIT FOR REVIEW: Dev-ops?*
 
 ### Aug 7, 12p-6p
 
