@@ -52,8 +52,9 @@
 
 - Added media queries for larger screens.
 - * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly. There were no "gotchas" in this example. Adding styles for larger screens was strait-forward.
-- Published to staging @ [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
-- Tested site on different OSs, browsers and devicess with various screen sizes.
+- Staged and tested [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
+- * Tested various browsers, platforms, and devices
+- * Tested various viewports and device media
 
 [MERGED PULL REQUEST 4](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/4)
 
