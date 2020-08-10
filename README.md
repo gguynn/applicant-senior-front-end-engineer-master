@@ -65,8 +65,7 @@ Initially, I authored javascript in the most-straitgorward way possible using jQ
 
 - [navigation.js before modules](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/f19faecdfdf5a7fb958a8b0cfaa0c338bfbd012d/src/theme/sfee/assets/js/frontend/navigation.js) (Draft).
 - [navigation.js after modules](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js) (Optimal)
-
-* Note transpiling was not used for this exercise and is recommended in most real-world production environments.
+- * Note transpiling was not used for this exercise and is recommended in most real-world production environments.
 
 [MERGED PULL REQUEST 5](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/5)
 
