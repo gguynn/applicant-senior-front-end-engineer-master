@@ -75,9 +75,9 @@ Initially, I authored javascript in the most-straitforward way possible using jQ
 
 [MERGED PULL REQUEST 5](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/5)
 
-*SUBMIT FOR REVIEW: Peer/Team lead*
+*SUBMIT FOR REVIEW: Peer/Team lead, then QA*
 
-*SUBMIT FOR REVIEW: Project lead & QA*
+*SUBMIT FOR REVIEW: Project lead*
 
 ### Extra
 
