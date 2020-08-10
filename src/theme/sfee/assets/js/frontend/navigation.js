@@ -94,7 +94,7 @@
 				$searchField.blur();
 			}
 
-			// Remove external click event listener
+			// Remove esternal click event listener
 			externalEl.removeEventListener( 'click', onExternalClick );
 		};
 
