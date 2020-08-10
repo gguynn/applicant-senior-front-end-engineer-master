@@ -9,6 +9,7 @@
 - Added database and site: Eats.
 - Added repo and initial commit.
 - * Skipped using environment variables for this exercise.
+- * Skipped staging this exercise, used feature branches.
 
 #### Added SFEE Theme (Theme CLI)
 
@@ -35,6 +36,8 @@
 
 [MERGED PULL REQUEST 2](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/2)
 
+*SUBMIT FOR REVIEW: Dev-ops*
+
 ### Aug 7, 12p-6p
 
 #### Theme Development: Content
@@ -52,11 +55,13 @@
 
 - Added media queries for larger screens.
 - * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly. There were no "gotchas" in this example. Adding styles for larger screens was straitforward.
-- Staged and tested [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
+- Published and tested [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
 - * Tested various browsers, platforms, and devices
 - * Tested various viewports and device media
 
 [MERGED PULL REQUEST 4](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/4)
+
+*SUBMIT FOR REVIEW: Creative*
 
 ### Aug 9, 12p-2p
 
@@ -69,6 +74,10 @@ Initially, I authored javascript in the most-straitforward way possible using jQ
 - * Note transpiling was not used for this exercise and is recommended in most real-world production environments.
 
 [MERGED PULL REQUEST 5](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/5)
+
+*SUBMIT FOR REVIEW: Peer/Team lead*
+
+*SUBMIT FOR REVIEW: Project lead & QA*
 
 ### Extra
 
