@@ -36,7 +36,7 @@
 
 [MERGED PULL REQUEST 2](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/2)
 
-*SUBMIT FOR REVIEW: Dev-ops*
+*SUBMIT FOR REVIEW: Dev-ops?*
 
 ### Aug 7, 12p-6p
 
