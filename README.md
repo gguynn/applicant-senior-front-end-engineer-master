@@ -108,11 +108,10 @@ Note: For this exercise, `WP_DEBUG` is set to `true`.
 
 [http://eats.test/wp-login.php](http://eats.test/wp-login.php)
 
-user/pass:
-demo
-Nn3hbaS7Qi1nXRv)KWJXaX*D
-
-1. Login and click `Save Changes` on [Permalink Settings](http://eats.test/wp-admin/options-permalink.php)
+1. Login with user/pass:
+* demo
+* Nn3hbaS7Qi1nXRv)KWJXaX*D
+1. Apply permalinks by clicking `Save Changes` @ [Permalink Settings](http://eats.test/wp-admin/options-permalink.php)
 
 # Project
 
