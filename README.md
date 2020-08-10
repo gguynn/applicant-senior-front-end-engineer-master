@@ -51,7 +51,7 @@
 #### Theme Development: Breakpoints and Testing
 
 - Added media queries for larger screens.
-- * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly. There were no "gotchas" in this example. Adding styles for larger screens was strait-forward.
+- * Note: while responsive breakpoints came last, larger screens were reviewed ahead of time and mobile-first was built accordningly. There were no "gotchas" in this example. Adding styles for larger screens was straitforward.
 - Staged and tested [http://garrettg3.sg-host.com/](http://garrettg3.sg-host.com/)
 - * Tested various browsers, platforms, and devices
 - * Tested various viewports and device media
@@ -62,7 +62,7 @@
 
 #### Theme Development: JavaScript and Testing
 
-Initially, I authored javascript in the most-straitgorward way possible using jQuery to maximize readability. This allowed for flexibility while still making decisions with markup, styles, and animations in the theme. After being satisfied with the theme's overall functionality and having committed to structure, I spent time optimizing my initial javascript by pulling from a module-based approach to get to the finish line.
+Initially, I authored javascript in the most-straitforward way possible using jQuery to maximize readability. This allowed for flexibility while still making decisions with markup, styles, and animations in the theme. After being satisfied with the theme's overall functionality and having committed to structure, I spent time optimizing my initial javascript by pulling from a module-based approach to get to the finish line.
 
 - [navigation.js before modules](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/f19faecdfdf5a7fb958a8b0cfaa0c338bfbd012d/src/theme/sfee/assets/js/frontend/navigation.js) (Draft).
 - [navigation.js after modules](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js) (Optimal)
