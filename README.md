@@ -95,7 +95,7 @@ Note: I will be using [Laravel Valet](https://laravel.com/docs/7.x/valet) to map
 
 `cd dist/public && valet link eats && cd ../../`
 
-### 3. Configure your database and copy theme foloder
+### 3. Configure your database and copy theme folder
 
 1. Create a SQL database. Mine is called: `eats`
 1. Import this SQL file into your database: `src/eats_2020-08-07.sql`
