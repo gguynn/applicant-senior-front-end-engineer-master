@@ -1,4 +1,4 @@
-# Developer Notes/Logs for Review
+# Developer Notes: Documentation for Review
 
 ### Aug 6, 12p-5p
 
@@ -69,9 +69,9 @@ Initially, I authored javascript in the most-straitgorward way possible using jQ
 
 [MERGED PULL REQUEST 5](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/5)
 
-### Summary
+### Extra
 
-Thank you for reviewing this exercise. Revisions and further excersies will be done upon request. Please excuse typos in commit messages.
+Thank you for reviewing this exercise. Revisions and further excersies will be done upon request. Please excuse typos in commit messages. Mahalo!
 
 *Total hours:* 22
 
