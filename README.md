@@ -71,7 +71,7 @@ Initially, I authored javascript in the most-straitgorward way possible using jQ
 
 ### Summary
 
-Thank you for reviewing this exercise. Revisions and further excersies will be done upon request.
+Thank you for reviewing this exercise. Revisions and further excersies will be done upon request. Please excuse typos in commit messages.
 
 *Total hours:* 22
 
