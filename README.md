@@ -16,17 +16,17 @@
 - Organized structure similar to [10up Engineering Best Practices](https://10up.github.io/Engineering-Best-Practices/structure/#file-organization).
 - Added theme assets.
 - Added sass variables and partials.
-- Tested and compiled styles and scripts including Composer build scripts.
-- Added initial CSS basing on [HTML5 Boilerplate](https://html5boilerplate.com/) and normalize.
-- * Skipped using minification, Babel, autoprefixing, and all other asset specific bundling for this exercise. Used manual linting and IDE.
+- Linted and compiled styles and scripts and tested Composer build scripts.
+- Added initial CSS based on [HTML5 Boilerplate](https://html5boilerplate.com/) and normalize. * Did not treat normalize as a dependency.
+- * Skipped transpiling, minififying, and autoprefixing, for this exercise. Used manual linting and IDE for formatting.
 
-√ Core and Theme files can be bundled, compiled, and version control independently.
+√ Core and Theme files can be bundled, compiled, and version controled independently.
 
 [MERGED PULL REQUEST 1](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/1)
 
 ### Aug 6, 6p-12a
 
-#### Theme Development: Root
+#### Theme Development: Core Components
 
 - Added root components: header, navigation, search, content and styles.
 - Added pages, menu items, logo, and styles.
@@ -57,28 +57,24 @@
 
 [MERGED PULL REQUEST 4](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/4)
 
+### Aug 9, 12p-2p
+
+#### Theme Development: JavaScript and Testing
+
+Initially, I authored javascript in the most-straitgorward way possible using jQuery to maximize readability. This allowed for flexibility while still making decisions with markup, styles, and animations in the theme. After being satisfied with the theme's overall functionality and having committed to structure, I spent time optimizing my initial javascript by pulling from a module-based approach to get to the finish line.
+
+- [navigation.js before modules](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/f19faecdfdf5a7fb958a8b0cfaa0c338bfbd012d/src/theme/sfee/assets/js/frontend/navigation.js) (Draft).
+- [navigation.js after modules](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js) (Optimal)
+
+* Note transpiling was not used for this exercise and is recommended in most real-world production environments.
+
+[MERGED PULL REQUEST 5](https://github.com/gguynn/applicant-senior-front-end-engineer-master/pull/5)
+
 ### Summary
 
-Total hours: *20*
+Thank you for reviewing this exercise. Revisions and further excersies will be done upon request.
 
-#### Animation and State (UI/UX)
-
-I chose not to use a fixed header because it was not explicitly requested.  Consideration for the admin bar would be made if the header was fixed.  In a team setting, I will ask Creative or Project Management for direction.  I won't take liberties except when instructed to for all UI/UX.  I work only with what information I have and always request the information I need.
-
-#### Vanilla JS vs jQuery
-
-I decided against any over-abstraction for and kept it simple re: [navigation.js](https://github.com/gguynn/applicant-senior-front-end-engineer-master/blob/master/src/theme/sfee/assets/js/frontend/navigation.js). jQuery was used to maximize readability.
-
-#### Final Notes
-
-Thanks for taking the time to review this exercise! I'm happy to submit revisions or more exercises upon request. Any feedback is greatly appreciated so that I may continue to improve my FE skills.
-
-All the best,
-
-Garrett Guynn, applicant for SFEE role at 10up
-
-- [LinkedIn](https://www.linkedin.com/in/gguynn/)
-- [Resume/CV](https://drive.google.com/file/d/1rrmjnK1JJNBSNrrO-xhZhWxjcC0AQKIk/view?usp=sharing)
+*Total hours:* 22
 
 # Installation
 
