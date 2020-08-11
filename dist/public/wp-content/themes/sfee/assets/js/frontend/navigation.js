@@ -47,7 +47,7 @@
 			$containers.slideUp( duration, easing.leave );
 
 			// Remove external click event listener
-			externalEl.removeEventListener( 'click', handleExternalClick );
+			externalEl.removeEventListener( 'click', onExternalClick );
 
 			// Remove focus from search field
 			$searchField = $containers.find( '.search-field ' );
